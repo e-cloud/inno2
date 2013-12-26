@@ -68,6 +68,7 @@ public class SpeakerDetailActivtiy extends Activity {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+
 		mSpeakerName.setText(mSpeaker.getName());
 		mSpeakerTitle.setText(mSpeaker.getTitle());
 		mSpeakerDetail.setText(mSpeaker.getDetails());

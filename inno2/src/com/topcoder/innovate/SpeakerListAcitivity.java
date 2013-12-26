@@ -7,6 +7,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.Reader;
+import java.lang.ref.WeakReference;
 import java.lang.reflect.Field;
 import java.util.ArrayList;
 import java.util.List;
@@ -52,6 +53,10 @@ public class SpeakerListAcitivity extends Activity {
 	private static final String TAG = "Innovate";
 	private List<Speaker> mSpeakers;
 
+	private WeakReference<SpeakerListAcitivity> wfsla = new WeakReference<SpeakerListAcitivity>(
+			this);
+	private Handler handler = new MyHandler(wfsla);
+
 	/*
 	 * (non-Javadoc)
 	 * 
@@ -61,85 +66,94 @@ public class SpeakerListAcitivity extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
 		super.onCreate(savedInstanceState);
+
 		setContentView(R.layout.activity_speakerlist);
 
 		// mSpeakers = loadDataFromAsset();
 
-		createDownloadThread();
+		if (NetworkDetector.isNetworkConnected(getApplicationContext())) {
 
-		mListView = (ListView) findViewById(R.id.listview);
-		homeButton = (ImageView) findViewById(R.id.home_btn);
-		infoButton = (ImageView) findViewById(R.id.info_btn);
+			createDownloadThread();
 
-		homeButton.setOnClickListener(new OnClickListener() {
+			mListView = (ListView) findViewById(R.id.listview);
+			homeButton = (ImageView) findViewById(R.id.home_btn);
+			infoButton = (ImageView) findViewById(R.id.info_btn);
 
-			@Override
-			public void onClick(View v) {
-				// TODO Auto-generated method stub
-				Log.d(TAG, "clicked on home button");
-				Intent intent = new Intent(SpeakerListAcitivity.this,
-						HomeActivity.class);
-				startActivity(intent);
-			}
-		});
+			homeButton.setOnClickListener(new OnClickListener() {
 
-		infoButton.setOnClickListener(new OnClickListener() {
+				@Override
+				public void onClick(View v) {
+					// TODO Auto-generated method stub
+					Log.d(TAG, "clicked on home button");
+					Intent intent = new Intent(SpeakerListAcitivity.this,
+							HomeActivity.class);
+					startActivity(intent);
+				}
+			});
 
-			@Override
-			public void onClick(View v) {
-				// TODO Auto-generated method stub
-				Log.d(TAG, "clicked on info button");
-				// Start game here...
-				Intent intent = new Intent(SpeakerListAcitivity.this,
-						WebViewActivity.class);
-				startActivity(intent);
-			}
-		});
+			infoButton.setOnClickListener(new OnClickListener() {
 
-		mListView.setOnItemClickListener(new OnItemClickListener() {
-			@Override
-			public void onItemClick(AdapterView<?> parent, View view,
-					int position, long id) {
-				// TODO Auto-generated method stub
-				Intent intent = new Intent(SpeakerListAcitivity.this,
-						SpeakerDetailActivtiy.class);
-				Bundle bundle = new Bundle();
-				bundle.putSerializable("speaker", mSpeakers.get(position));
-				intent.putExtras(bundle);
-				startActivity(intent);
-			}
-		});
+				@Override
+				public void onClick(View v) {
+					// TODO Auto-generated method stub
+					Log.d(TAG, "clicked on info button");
+					// Start game here...
+					Intent intent = new Intent(SpeakerListAcitivity.this,
+							WebViewActivity.class);
+					startActivity(intent);
+				}
+			});
+
+			mListView.setOnItemClickListener(new OnItemClickListener() {
+				@Override
+				public void onItemClick(AdapterView<?> parent, View view,
+						int position, long id) {
+					// TODO Auto-generated method stub
+					Intent intent = new Intent(SpeakerListAcitivity.this,
+							SpeakerDetailActivtiy.class);
+					Bundle bundle = new Bundle();
+					bundle.putSerializable("speaker", mSpeakers.get(position));
+					intent.putExtras(bundle);
+					startActivity(intent);
+				}
+			});
+		} else {
+			new AlertDialog.Builder(SpeakerListAcitivity.this)
+					.setTitle(R.string.head)
+					.setMessage(R.string.message)
+					.setPositiveButton(
+							getResources().getString(R.string.ok),
+							new android.content.DialogInterface.OnClickListener() {
+
+								@Override
+								public void onClick(DialogInterface dialog,
+										int which) {
+									// TODO Auto-generated method stub
+									finish();
+								}
+							}).show();
+		}
 	}
 
-	@SuppressLint("HandlerLeak")
-	private Handler handler = new Handler() {
+	private static class MyHandler extends Handler {
+		WeakReference<SpeakerListAcitivity> weakref = null;
+
+		public MyHandler(WeakReference<SpeakerListAcitivity> weakref) {
+			this.weakref = weakref;
+		}
+
 		@Override
 		public void handleMessage(Message msg) {
 			super.handleMessage(msg);
 			Bundle data = msg.getData();
 			String val = data.getString("value");
 			Log.i(TAG, "message-->" + val);
-			if (data.getBoolean("isAvailable")) {
-				setAdapter();
-			} else {
-				new AlertDialog.Builder(SpeakerListAcitivity.this)
-						.setTitle(R.string.head)
-						.setMessage(R.string.message)
-						.setPositiveButton(
-								getResources().getString(R.string.ok),
-								new android.content.DialogInterface.OnClickListener() {
-
-									@Override
-									public void onClick(DialogInterface dialog,
-											int which) {
-										// TODO Auto-generated method stub
-										finish();
-									}
-								}).show();
+			if (weakref != null) {
+				weakref.get().setAdapter();
 			}
 
 		}
-	};
+	}
 
 	private void setAdapter() {
 		SpeakerAdapter speakerAdapter = new SpeakerAdapter(this, mSpeakers);
@@ -148,53 +162,108 @@ public class SpeakerListAcitivity extends Activity {
 
 	@SuppressLint("NewApi")
 	private void createDownloadThread() {
-
 		new Thread(new Runnable() {
 
 			@Override
 			public void run() {
 				// TODO: http request.
-				try {
-					new Thread(new Runnable() {
+				DataRetriever retriever = new DataRetriever();
+				mSpeakers = retriever
+						.retrieveAllSpeakers(SpeakerListAcitivity.this);
+				Log.i(TAG, "list size = " + mSpeakers.size());
 
-						@Override
-						public void run() {
-							// TODO: http request.
-							DataRetriever retriever = new DataRetriever();
-							mSpeakers = retriever
-									.retrieveAllSpeakers(SpeakerListAcitivity.this);
-							Log.i(TAG, "list size = " + mSpeakers.size());
-
-							boolean isAvailable = NetworkDetector
-									.isNetworkConnected(SpeakerListAcitivity.this)
-									&& mSpeakers.isEmpty();
-							Message msg = new Message();
-							Bundle data = new Bundle();
-							data.putString("value", "download succeed.");
-							data.putBoolean("isAvailable", isAvailable);
-							msg.setData(data);
-							handler.sendMessage(msg);
-						}
-					}).start();
-					Thread.sleep(2000);
-					if (mSpeakers != null) {
-						boolean isAvailable = NetworkDetector
-								.isNetworkConnected(SpeakerListAcitivity.this)
-								&& mSpeakers.isEmpty();
-						Message msg = new Message();
-						Bundle data = new Bundle();
-						data.putString("value", "download succeed.");
-						data.putBoolean("isAvailable", isAvailable);
-						msg.setData(data);
-						handler.sendMessage(msg);
-					}
-				} catch (InterruptedException e) {
-					// TODO Auto-generated catch block
-					e.printStackTrace();
-				}
-
+				Message msg = new Message();
+				Bundle data = new Bundle();
+				data.putString("value", "download succeed.");
+				msg.setData(data);
+				handler.sendMessage(msg);
 			}
 		}).start();
+	}
+
+	private static class ViewHolder {
+		ImageView mImage = null;
+		TextView mName = null;
+		TextView mTitle = null;
+	}
+
+	private class SpeakerAdapter extends BaseAdapter {
+
+		@SuppressWarnings("unused")
+		private Context mContext; // 运行上下文
+		private List<Speaker> mListItems; // 发言人信息集合
+		private LayoutInflater mLayoutInflater; // 视图容器
+
+		public SpeakerAdapter(Context context, List<Speaker> listItems) {
+			this.mContext = context;
+			mLayoutInflater = LayoutInflater.from(context);
+			this.mListItems = listItems;
+		}
+
+		@Override
+		public int getCount() {
+			// TODO Auto-generated method stub
+			return mListItems.size();
+		}
+
+		@Override
+		public Object getItem(int position) {
+			// TODO Auto-generated method stub
+			return mListItems.get(position);
+		}
+
+		@Override
+		public long getItemId(int position) {
+			// TODO Auto-generated method stub
+			return 0;
+		}
+
+		@Override
+		public View getView(int position, View convertView, ViewGroup parent) {
+			// TODO Auto-generated method stub
+			ViewHolder viewHolder = null;
+
+			if (convertView == null) {
+				viewHolder = new ViewHolder();
+
+				convertView = mLayoutInflater.inflate(R.layout.speaker, parent,
+						false);
+
+				viewHolder.mImage = (ImageView) convertView
+						.findViewById(R.id.speaker_picture);
+				viewHolder.mName = (TextView) convertView
+						.findViewById(R.id.speaker_name);
+				viewHolder.mTitle = (TextView) convertView
+						.findViewById(R.id.speaker_title);
+				convertView.setTag(viewHolder);
+			} else {
+				viewHolder = (ViewHolder) convertView.getTag();
+			}
+
+			Speaker speaker = mListItems.get(position);
+			Field field;
+			try {
+				Class<com.topcoder.innovate.R.drawable> resource = R.drawable.class;
+				field = resource.getField(speaker.getPictureName());
+				viewHolder.mImage.setImageResource(field.getInt(null));
+			} catch (NoSuchFieldException e) {
+				// TODO Auto-generated catch block
+				Log.w(TAG, "particular image not found and use default image.");
+				viewHolder.mImage.setImageResource(R.drawable.default_speaker);
+			} catch (IllegalArgumentException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			} catch (IllegalAccessException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+
+			viewHolder.mName.setText(speaker.getName());
+			viewHolder.mTitle.setText(speaker.getTitle());
+
+			return convertView;
+		}
+
 	}
 
 	@SuppressWarnings("unused")
@@ -210,7 +279,7 @@ public class SpeakerListAcitivity extends Activity {
 		}
 	}
 
-	public List<Speaker> retrieveAllSpeakers(InputStream inputStream) {
+	private List<Speaker> retrieveAllSpeakers(InputStream inputStream) {
 		// 存储获得得Speaker，用于将数据返回
 		List<Speaker> speakerArrayList = new ArrayList<Speaker>();
 		try {
@@ -267,102 +336,6 @@ public class SpeakerListAcitivity extends Activity {
 		}
 
 		return speakerArrayList;
-	}
-
-	private static class ViewHolder {
-		ImageView mImage = null;
-		TextView mName = null;
-		TextView mTitle = null;
-	}
-
-	private class SpeakerAdapter extends BaseAdapter {
-
-		@SuppressWarnings("unused")
-		private Context mContext; // 运行上下文
-		private List<Speaker> mListItems; // 发言人信息集合
-		private LayoutInflater mLayoutInflater; // 视图容器
-
-		public SpeakerAdapter(Context context, List<Speaker> listItems) {
-			this.mContext = context;
-			mLayoutInflater = LayoutInflater.from(context);
-			this.mListItems = listItems;
-		}
-
-		@Override
-		public int getCount() {
-			// TODO Auto-generated method stub
-			return mListItems.size();
-		}
-
-		@Override
-		public Object getItem(int position) {
-			// TODO Auto-generated method stub
-			return mListItems.get(position);
-		}
-
-		@Override
-		public long getItemId(int position) {
-			// TODO Auto-generated method stub
-			return 0;
-		}
-
-		@Override
-		public View getView(int position, View convertView, ViewGroup parent) {
-			// TODO Auto-generated method stub
-			ViewHolder viewHolder = null;
-
-			if (convertView == null) {
-				viewHolder = new ViewHolder();
-				/*
-				 * if you use the LayoutInflater.inflate method in the code of
-				 * the Activity or the adapter(its getView method), don't pass
-				 * the ListView as the second parameter. For example, don't use:
-				 * 
-				 * convertView = inflator.inflate(R.layout.child_rows, parent);
-				 * as in Tamilarasi Sivaraj's answer as that will throw the
-				 * exception again. Instead use:
-				 * 
-				 * convertView = inflator.inflate(R.layout.child_rows, parent,
-				 * false);
-				 */
-				convertView = mLayoutInflater.inflate(R.layout.speaker, parent,
-						false);
-
-				viewHolder.mImage = (ImageView) convertView
-						.findViewById(R.id.speaker_picture);
-				viewHolder.mName = (TextView) convertView
-						.findViewById(R.id.speaker_name);
-				viewHolder.mTitle = (TextView) convertView
-						.findViewById(R.id.speaker_title);
-				convertView.setTag(viewHolder);
-			} else {
-				viewHolder = (ViewHolder) convertView.getTag();
-			}
-
-			Speaker speaker = mListItems.get(position);
-			Field field;
-			try {
-				Class<com.topcoder.innovate.R.drawable> resource = R.drawable.class;
-				field = resource.getField(speaker.getPictureName());
-				viewHolder.mImage.setImageResource(field.getInt(null));
-			} catch (NoSuchFieldException e) {
-				// TODO Auto-generated catch block
-				Log.w(TAG, "particular image not found and use default image.");
-				viewHolder.mImage.setImageResource(R.drawable.default_speaker);
-			} catch (IllegalArgumentException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			} catch (IllegalAccessException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
-
-			viewHolder.mName.setText(speaker.getName());
-			viewHolder.mTitle.setText(speaker.getTitle());
-
-			return convertView;
-		}
-
 	}
 
 }
