@@ -1,0 +1,1280 @@
+[{"pk": 2, "model": "innovate.speaker", "fields": {"picture":
+"/static/i/speakers/01_alavilli_r5.png", "sessions": [40], "title":
+"Developer Evangelist, PayPal", "name": "Praveen Alavilli", "details":
+"Praveen Alavilli is the developer evangelist for the PayPal X Developer
+Network, helping developers to monetize their ideas and applications
+using the PayPal Payments Platform. Prior to PayPal, Praveen worked at
+Amazon.com and AOL. "}}, {"pk": 3, "model": "innovate.speaker",
+"fields": {"picture": "/static/i/speakers/default_speaker.png",
+"sessions": [11, 85], "title": "Global Head of Product Strategy for
+Financial Innovations, PayPal", "name": "Peter Amalraj", "details":
+"Peter Amalraj is the Global Head of PayPal Product and Product Strategy
+for Financial Innovations. He has close to 2 decades of experience in
+the financial services space and in the past has worked at Citicorp,
+Metavante (Now FIS), Schlumberger as well as in consulting roles for
+Intuit, Wells Fargo, Chase Card Services. His experience spans consumer
+payments, ecommerce, payment processing, banking, EBPP. "}}, {"pk": 4,
+"model": "innovate.speaker", "fields": {"picture":
+"/static/i/speakers/02_anwar_r5.png", "sessions": [62], "title": "Sr.
+Director PayPal Developer Network, PayPal", "name": "Naveed Anwar",
+"details": "Naveed Anwar leads all PayPal's efforts with developers. As
+the senior director of the PayPal Developer Network, he leads a team
+that evangelizes PayPal X and works closely with the developer community
+to gain insight on how PayPal can deliver the best global payments
+platform possible for third party developers. "}}, {"pk": 5, "model":
+"innovate.speaker", "fields": {"picture":
+"/static/i/speakers/attaras.png", "sessions": [23], "title": "Director
+Technology, PayPal Platform, PayPal", "name": "Musaab At-Taras",
+"details": "Musaab is a Director of Technology at PayPal, leading the
+Adaptive Payments and Payflow Engineering teams. He has over 12 years of
+experience in product development. He has a Bachelors degree in Computer
+Science from the University of Illinois at Urbana-Champaign. "}}, {"pk":
+6, "model": "innovate.speaker", "fields": {"picture":
+"/static/i/speakers/03_babaria_r5.png", "sessions": [20, 22], "title":
+"Senior Product Manager, PayPal", "name": "Ketan Babaria", "details":
+"Ketan is a product management leader with a rich experience in the
+internet space and a passion for building customer focused products that
+delight end users. Ketan has worn many hats in the past, being UI
+designer, developer, researcher, at various points in his life. He is
+currently part of the Digital Goods Product Management team at PayPal.
+He is passionate about the digital goods space and is constantly looking
+for ways to make it easy for customers to pay and help partners monetize
+their products. He holds B.Tech degree in engineering from IIT, MS in
+Systems Engineering from UMD and MBA from UC Berkeley. "}}, {"pk": 7,
+"model": "innovate.speaker", "fields": {"picture":
+"/static/i/speakers/bair.png", "sessions": [54], "title": "Software
+Architect, Client Java Platform, Oracle", "name": "Richard Bair",
+"details": "Richard Bair is the Architect for the Client Java platform
+at Oracle. He was an influential lead in the development of JavaFX UI
+Controls and associated APIs. Prior to that he was the lead of the
+SwingLabs project which was an open source community supported by Sun
+Microsystems with a focus on enhancing and extending Swing. Prior to
+working at Sun he was an application developer with a focus on
+data-oriented rich client applications backed by databases. He has a
+passion for graphics, performance, and developer productivity. "}},
+{"pk": 8, "model": "innovate.speaker", "fields": {"picture":
+"/static/i/speakers/barrett.png", "sessions": [63], "title": "Founder
+and CEO, Expensify", "name": "David Barrett", "details": "David is the
+founder and CEO of Expensify, a venture-backed startup doing \"expense
+reports that don't suck!\" David started programming when six years old,
+is married to an opera singer, and has the cutest beagle in the
+world."}}, {"pk": 9, "model": "innovate.speaker", "fields": {"picture":
+"/static/i/speakers/bawany.png", "sessions": [24, 54], "title":
+"Software Engineer, PayPal", "name": "Ali Bawany", "details": "Ali
+Bawany is a developer on the PayPal Platform working on the Adaptive
+Accounts team. "}}, {"pk": 10, "model": "innovate.speaker", "fields":
+{"picture": "/static/i/speakers/bezard.png", "sessions": [8], "title":
+"Co-Founder and Research Director, Aite Group LLC", "name": "Gwenn
+B\u00e9zard", "details": "Gwenn B\u00e9zard is a co-founder and research
+director at Aite Group, LLC, managing the firm's banking and payments
+practice. His recent coverage has focused on the transformation of the
+payment industry, emerging products such as prepaid and decoupled debit
+cards, competition among card networks, the evolution of loyalty
+marketing, and the optimization of the online banking channel. Mr.
+B\u00e9zard has over a decade of experience in assisting financial
+institutions, payment companies, and technology vendors with advisory
+services and strategy consulting. Mr. B\u00e9zard holds an M.A.
+(Ma\u00eetrise) degree in contemporary history from the University
+Rennes II, France, and is fluent in English and French."}}, {"pk": 11,
+"model": "innovate.speaker", "fields": {"picture":
+"/static/i/speakers/blonchek.png", "sessions": [17], "title": "President
+and CTO, Razoron Health Innovations", "name": "Bob Blonchek", "details":
+"Bob Blonchek is President of Razoron Health Innovations. He has founded
+or co-founded several technology companies, and is a creative and
+entrepreneurial executive with deep experience developing and executing
+new product and service strategies."}}, {"pk": 12, "model":
+"innovate.speaker", "fields": {"picture":
+"/static/i/speakers/bourbier.png", "sessions": [45], "title": "CEO,
+Limonetik", "name": "Christophe Bourbier", "details": "Christophe has a
+decade of experience in entrepreneurship, mobile and payments. Prior to
+co-founding Limonetik, he started and managed Onsite, a relational
+marketing consultancy and proprietary mobile payment telephone
+technology provider. Christophe also founded PlastiSynergy, a now
+defunct Internet market place for cosmetic surgery professionals and was
+the founding president of the Young French Chamber of Commerce and an
+initiator of Cre@TV. In past roles, Christophe was a managing partner at
+Alteir Consulting, a senior strategy and marketing consultant at Cap
+Gemini Ernst & Young where he launched BuildCom, an Internet market
+place for the construction industry; and while at ChannelPub, he created
+the development strategy for their plasma screen marketing solution.
+"}}, {"pk": 13, "model": "innovate.speaker", "fields": {"picture":
+"/static/i/speakers/bower.png", "sessions": [63, 96], "title": "CEO,
+Plastic Jungle", "name": "Bruce Bower", "details": "Bruce Bower joined
+Plastic Jungle as President in April 2009 and will assume the role of
+CEO in October 2010. For more than 20 years, Bruce has been contributing
+to early and mid stage technology enterprises. His management experience
+spans the payments, media, education, and alternate energy markets, with
+a particular emphasis on new business and international markets
+development. Prior to Plastic Jungle, Bruce held senior and CEO level
+positions at Blackhawk Network, Soliloquy Learning, LearningGate and the
+educational media division of ZapMe! Bruce also serves or has served as
+a director/senior advisor to several companies in the payments space
+including KargoKard, Radical Payments and Visa. He is a frequent speaker
+on a variety of new market concepts, including global payments and
+e-commerce strategies for emerging businesses. Bruce graduated from
+Brown University in 1984 with a B.A. in International Relations and
+received his law degree in 1988 from the University of Virginia. "}},
+{"pk": 14, "model": "innovate.speaker", "fields": {"picture":
+"/static/i/speakers/bui.png", "sessions": [56], "title": "President,
+WebAssist", "name": "Hieu Bui", "details": "Hieu is a co-founder and
+President of WebAssist. Hieu's 10+ years of e-commerce experience helps
+him develop, manage, and execute the long-term strategic vision of the
+company. "}}, {"pk": 15, "model": "innovate.speaker", "fields":
+{"picture": "/static/i/speakers/carroll.png", "sessions": [57], "title":
+"Director, Developer Evangelism, salesforce.com", "name": "David
+Carroll", "details": "Dave Carroll is the Director of Developer
+Evangelism at salesforce.com. In his 8 years at salesforce.com, Dave's
+focus has been on growing the developer community and inspiring
+developers to think creatively about using various Web 2.0 technologies
+with the company's Force.com platform as a service. Dave has also led
+and participated in the creation of many developer tools, including the
+Force.com Toolkit for AJAX, Force.com Toolkit for Adobe Flex and the
+Force.com IDE Eclipse plugin. "}}, {"pk": 16, "model":
+"innovate.speaker", "fields": {"picture": "/static/i/speakers/chau.png",
+"sessions": [43], "title": "Principal Engineer, Adaptive Payments,
+PayPal", "name": "Victor Chau", "details": "Victor is the Principal
+Engineer overseeing the technical design of the Adaptive Payments
+product at PayPal. He has been involved in its design and evolution
+since the beginning of the product. Victor has 10 years of product
+development experience, five of which was at PayPal. Victor is an
+alumnus of the University of California at Berkeley. "}}, {"pk": 17,
+"model": "innovate.speaker", "fields": {"picture":
+"/static/i/speakers/chiang.png", "sessions": [31], "title": "Principal
+Product Manager, Express Checkout, PayPal", "name": "Catherine Chiang",
+"details": "Catherine Chiang is a Principal Product Manager for Express
+Checkout. She currently leads the Best Practices Integration initiatives
+and the Merchant Features & Experience projects. Prior to her role as
+Product Manager, she was one of the original members of the PayPal
+Merchants Services Group, where she managed the Merchant Acquisition and
+Activation Programs. She's a veteran of merchant services and payment
+industry for over 6 years. Catherine received her MBA from Carnegie
+Mellon University. "}}, {"pk": 18, "model": "innovate.speaker",
+"fields": {"picture": "/static/i/speakers/cheong.png", "sessions": [21],
+"title": "CTO, Rentlord", "name": "Kok Hong Cheong", "details": "Kok
+Hong is fascinated with all types of bleeding-edge technology and the
+potential for technology to improve lives. The passion started early in
+his primary school years, when he fiddled with an Apple 2E taking apart
+and reassembling the hardware, and hacking computer game codes. He
+co-developed a client-server application which pushed out interactive
+SMS content through the gateways of local and regional Telco providers
+via HTTP and XML standards. Now a computing lecturer in a Singapore
+polytechnic, Kok Hong is passionate about inspiring his students and
+imparting knowledge. His specialization is in Web Applications
+Development using Python and .NET technologies. "}}, {"pk": 19, "model":
+"innovate.speaker", "fields": {"picture":
+"/static/i/speakers/collier.png", "sessions": [29], "title": "Author &
+Social Media Expert, The Collier Company, Inc.", "name": "Marsha
+Collier", "details": "Marsha Collier is the foremost eBay experts and
+educators in the world. With over 1 million copies of her books sold
+internationally, she is the top selling eBay eCommerce author. Among her
+books, eBay For Dummies (now in its sixth edition) is the bestselling
+book for beginners while her eBay Business All-in-One Desk Reference for
+Dummies is the best selling title on operating an eBay business. Today
+she's expanding into Social Media with her upcoming book, The Ultimate
+Online Customer Service Guide: How to Connect with Your Customers to
+Sell More! (Wiley Q4 2010). She makes regular appearances on television
+(the Today Show, The View, CBS Morning Show CNN and Fox), radio, and in
+print to discuss eCommerce. Guide."}}, {"pk": 20, "model":
+"innovate.speaker", "fields": {"picture":
+"/static/i/speakers/cooper.png", "sessions": [29], "title": "Online
+Solutions and Development Manager, Katmatcreations", "name": "Steven
+Cooper", "details": "Steven Cooper is online solutions and development
+manager for Katmatcreations, founder of CopyTwit.com and GoSqueesh.com.
+Steven is an evangelist for developing dynamic automated solutions but
+not at the end user's expense. "}}, {"pk": 21, "model":
+"innovate.speaker", "fields": {"picture": "/static/i/speakers/erwa.png",
+"sessions": [43], "title": "Engineering Development Manager, Adaptive
+Payments, PayPal", "name": "Mustafa Erwa", "details": "Mustafa is a
+Development Manger at PayPal, responsible for a subset of the Adaptive
+Payments Engineering team. He is also one of the Adaptive Payments
+domain technical leads that have been part of the team since the
+initiation of the project. Mustafa has a Bachelors degree in Computer
+Engineering and a Masters degree in Telecommunications Engineering from
+the University of Texas at Austin. "}}, {"pk": 22, "model":
+"innovate.speaker", "fields": {"picture":
+"/static/i/speakers/francisco.png", "sessions": [27], "title":
+"Founder/CEO, Vator, Inc.", "name": "Bambi Francisco", "details": "Bambi
+Francisco is founder and CEO of Vator Inc, the leading entrepreneur
+social network, which includes VatorNews, a business video network.
+Prior to Vator, Bambi was an award-winning journalist for Dow Jones
+MarketWatch. "}}, {"pk": 23, "model": "innovate.speaker", "fields":
+{"picture": "/static/i/speakers/fridman.png", "sessions": [7, 84],
+"title": "Business Development Manager, Financial Innovations, PayPal",
+"name": "Arkady Fridman", "details": "Arkady Fridman leads PayPal's
+Business Development efforts for Financial Innovations. In this role, he
+is responsible for fostering relationships with financial partners to
+promote the use of PayPal in a variety of financial services
+applications. Prior to his current role, he developed and executed the
+go-to-market product strategy for PayPal's initiatives with financial
+services partners. Arkady is a ten year veteran of PayPal with deep
+knowledge in all aspects of payments: business, product, operations, and
+infrastructure. "}}, {"pk": 24, "model": "innovate.speaker", "fields":
+{"picture": "/static/i/speakers/gangadharan.png", "sessions": [2],
+"title": "Platform Product Manager, eBay", "name": "Anand Gangadharan",
+"details": "As Platform Product Manager, Anand Gangadharan is
+responsible for packaging eBay Commerce platform and technologies into a
+cohesive set of APIs. APIs are critical to enable the Developer
+community create innovative solutions for eBay buyers and sellers. Prior
+to eBay, Anand held senior R&D management positions at Avaya, Quintus
+and Mainsoft. Anand holds a BS degree in Electronics & Communication
+Engineering. "}}, {"pk": 25, "model": "innovate.speaker", "fields":
+{"picture": "/static/i/speakers/11_garcia_r5.png", "sessions": [1],
+"title": "Manager, Global Product and Experience Group, PayPal", "name":
+"Dan Garcia", "details": "Dan Garcia is a manager in the PayPal Global
+Product & Experience group. He has been at PayPal for over 5 years,
+spending the bulk of his time developing and managing payment products
+for small-to-medium businesses. "}}, {"pk": 26, "model":
+"innovate.speaker", "fields": {"picture":
+"/static/i/speakers/12_griffin_r5.png", "sessions": [18, 42, 44],
+"title": "Sr. Product Manager, Mobile, PayPal", "name": "Kent Griffin",
+"details": "Kent Griffin is a Sr. Product Manager at PayPal and manages
+the mobile SDK products. He has been with PayPal for over five years;
+prior to that he developed solutions for other financial service
+providers. "}}, {"pk": 27, "model": "innovate.speaker", "fields":
+{"picture": "/static/i/speakers/hartz.png", "sessions": [28], "title":
+"Founder & CEO, Eventbrite", "name": "Kevin Hartz", "details": "Kevin
+Hartz is a serial entrepreneur and angel investor/adviser. He has
+co-founded three Internet companies and currently advises over a dozen
+start-ups. http://www.kevinhartz.com. "}}, {"pk": 28, "model":
+"innovate.speaker", "fields": {"picture":
+"/static/i/speakers/haynie.png", "sessions": [47, 98], "title": "CEO &
+Co-Founder, Appcelerator", "name": "Jeff Haynie", "details": "Jeff
+Haynie is CEO and Co-Founder of Appcelerator. He is a long-time serial
+entrepreneur, technologist, and blogger. Jeff blogs at
+http://blog.jeffhaynie.us and can be found on Twitter. "}}, {"pk": 29,
+"model": "innovate.speaker", "fields": {"picture":
+"/static/i/speakers/hoffman.png", "sessions": [45, 61], "title": "Sr
+Sales Engineer, Merchant Integration, PayPal", "name": "Chad Hoffman",
+"details": "Chad Hoffman is a Senior Sales Engineer in PayPal's Merchant
+Integration organization. He works with PayPal's largest merchants to
+help them understand and incorporate PayPal into their ecommerce sites.
+He has over 12 years of experience providing technical expertise to
+support the sale of internet and ecommerce technologies. "}}, {"pk": 30,
+"model": "innovate.speaker", "fields": {"picture":
+"/static/i/speakers/hudson.png", "sessions": [48, 49], "title":
+"Founder, Aduci, LLC", "name": "Chuck Hudson", "details": "Chuck Hudson
+consults with companies on Internet and mobile applications, including
+CRM, e-commerce, and social networking. He teaches at the university
+level, is a technical reviewer, a certified PayPal developer, and a 2008
+eBay Star Developer. "}}, {"pk": 31, "model": "innovate.speaker",
+"fields": {"picture": "/static/i/speakers/18_jain_r5.png", "sessions":
+[25, 35], "title": "Sr. Product Manager for Platform, PayPal", "name":
+"Ashish Jain", "details": "Ashish Jain is a Product Manager with PayPal,
+where he is responsible for driving the strategy for PayPal Identity
+Services. Prior to joining PayPal, he held senior positions with
+Symantec, Ping Identity and BEA Systems. He is the co-author of J2EE 1.4
+Bible (Wiley) and Enterprise SOA (Springer). He is passionate about
+identity and is building solutions for users to have an easy and secure
+internet experience. "}}, {"pk": 32, "model": "innovate.speaker",
+"fields": {"picture": "/static/i/speakers/jessup.png", "sessions": [38],
+"title": "CEO, Cloud Conversion", "name": "Jon Jessup", "details": "Jon
+Jessup is the CEO of Cloud Conversion and has been building eBay,
+PayPal, and Salesforce.com applications for over four years. eCommSource
+by Cloud Conversion is used by many online retailers and recently won
+the 2010 eBay Star Developer Award. "}}, {"pk": 33, "model":
+"innovate.speaker", "fields": {"picture":
+"/static/i/speakers/jones.png", "sessions": [13], "title": "Payments
+Industry Consultant, Glenbrook Partners, LLC", "name": "Russ Jones",
+"details": "Russ Jones is an industry pioneer in the commercial use of
+Internet technologies, and brings a strong background in payments
+industry analysis, strategy development, and product conceptualization.
+With Glenbrook he currently works with clients in all aspects of global
+payments stragegy including global acceptance, alternative payments,
+risk management, and digital identity. "}}, {"pk": 34, "model":
+"innovate.speaker", "fields": {"picture":
+"/static/i/speakers/kanok.png", "sessions": [32, 92], "title":
+"Developer Technical Services Lead Manager, PayPal ", "name": "Robert
+Kanok", "details": "Robert manages the Developer Technical Services team
+(DTS) which provides technical support/services for the PayPal Platform
+product. He has been with PayPal for less than a year and prior to that
+was doing technical consulting for multiple online companies including
+Amazon and Verizon. Robert holds a BS in Electrical Engineering and has
+a MS in Computer Science from the University of Denver. "}}, {"pk": 35,
+"model": "innovate.speaker", "fields": {"picture":
+"/static/i/speakers/kassaei.png", "sessions": [40], "title": "Platform
+Architect, eBay", "name": "Farhang Kassaei", "details": "Farhang Kassaei
+is platform architect at eBay where he leads the eBay Application
+Platform, Identity, Security and fraud prevention initiatives. He has 20
+years of experience in building large scale systems. He holds MSc. in
+computer engineering and MBA from University of California at
+Berkley."}}, {"pk": 36, "model": "innovate.speaker", "fields":
+{"picture": "/static/i/speakers/kato.png", "sessions": [46], "title":
+"Co-Founder, iConcessionStand.com ", "name": "Kenji Kato", "details":
+"Kenji Kato is a technolusting geek entrepreneur and podcaster who has
+worked in the technology, software and media production industries for
+over 20 years for companies such as Apple, SGI, Alias | Wavefront, and
+NASA, as well as having taught at Stanford University's Professional
+Publishing Courses as a founding faculty member of the New Media Group.
+Kenji created his first POS system in 1990, and has since been involved
+with several commerce systems and startups, including Bitmenu's digital
+media monetization system. Kenji's current venture is working on
+iConcessionStand with fellow creator Humberto Roa. iConcessionStand is
+an innovative Location Aware Mobile Marketplace that won the PayPal Best
+App Award at the first ever iPadDevCamp in March 2010. Kenji is also an
+avid podcaster, and has appeared on shows such as This Week in Tech
+(TWiT), MacBreak, has spoken at Apple's WWDC, BlogWorld & New Media
+Expo, and podcasts weekly at KnowTech.tv on a wide range of topics. "}},
+{"pk": 37, "model": "innovate.speaker", "fields": {"picture":
+"/static/i/speakers/21_khalil_r5.png", "sessions": [54], "title":
+"Software Engineer, PayPal", "name": "Muasir Khalil", "details": "Muasir
+Khalil has previously worked as a lead developer for multiple features
+of IBM WebSphere Application Server 7.0. He is currently working as a
+developer on PayPal's Platform Adaptive Accounts team. "}}, {"pk": 38,
+"model": "innovate.speaker", "fields": {"picture":
+"/static/i/speakers/khan.png", "sessions": [20, 22, 23], "title": "Sr.
+Product Manager, PayPal", "name": "Khurram Khan", "details": "Khurram
+Khan is a Sr. Product Manager of PayPal X Platform, an Ebay Company. He
+has tremendous passion to build innovative products and solutions for
+opportunists at all levels. His recent accomplishment includes launching
+Adaptive Payments web services - an intersection of money and ideas.
+These web services serve a wide spectrum of audience who can now focus
+more on their core competency and less on monetization. He has a patent
+for his achievements. Khurram has a wealth of professional experience
+from companies such as Intel Corporation, NWS solutions, ALICO, FOCUS
+which comprises of diverse industries such as Payments, Software and
+Information Technology, Light metal industry, Services, Sales and
+Marketing. Khurram has a bachelor's degree in Industrial and Production
+Engineering, a Masters in Computer Science and a MBA. "}}, {"pk": 39,
+"model": "innovate.speaker", "fields": {"picture":
+"/static/i/speakers/khaw.png", "sessions": [63, 96], "title": "Sr.
+Business Development Manager, PayPal ", "name": "Mike Khaw", "details":
+"Mike Khaw is a Sr Manager in the business development group at PayPal
+X. He focuses on finding new, emerging use cases to embed PayPal into,
+such as B2B payments and devices. "}}, {"pk": 40, "model":
+"innovate.speaker", "fields": {"picture":
+"/static/i/speakers/klimenko.png", "sessions": [36], "title": "Director,
+Strategy and Business Operations, PayPal", "name": "Paulina Klimenko",
+"details": "Paulina Klimenko is the Director of Strategy and Business
+Operations of PayPal X. She is responsible for identifying new business
+opportunities for PayPal Platform, and operationalizing solutions, such
+as check replacement. Paulina has 10 years of experience in financial
+services and consumer Internet. "}}, {"pk": 41, "model":
+"innovate.speaker", "fields": {"picture":
+"/static/i/speakers/knapp.png", "sessions": [19], "title": "Co-Founder
+and CTO, Ooyala", "name": "Sean Knapp", "details": "Sean Knapp is a
+co-founder of Ooyala. As the company's CTO and President of Technology,
+he oversees all engineering and helps define and execute Ooyala's
+product strategies. Before founding Ooyala, Sean worked at Google, where
+he developed and launched iGoogle, the company's popular customizable
+home page. He also was a tech lead for Google's legendary Web Search
+team, helping that team increase Google revenues by $1 billion. Sean's
+focus at Stanford and at Google was human-computer interactions and
+personalized user experience. He is an avid runner and competed on
+Stanford University's Division I track and cross country teams. Sean has
+a B.S. and M.S. in Computer Science from Stanford University. "}},
+{"pk": 42, "model": "innovate.speaker", "fields": {"picture":
+"/static/i/speakers/kohli.png", "sessions": [52], "title": "Developer,
+E-junkie", "name": "Robin Kohli", "details": "Robin Kohli is a software
+developer, best known for founding E-junkie. "}}, {"pk": 43, "model":
+"innovate.speaker", "fields": {"picture":
+"/static/i/speakers/kramer.png", "sessions": [32], "title": "Platform
+Application Review Lead Manager, PayPal", "name": "Aaron Kramer",
+"details": "Aaron manages the application review process for PayPal's
+Adaptive APIs. His goal in life is to make sure your application is the
+best it can be while complying with the rules and regulations associated
+with financial transactions. Prior to PayPal, he spent nine years at IBM
+in various partner-facing roles, including strategy consulting to
+Fortune 100 companies. He has a BA Clinical Psychology and a BA in
+Ancient History from The University of Kansas as well as an MBA from
+Georgetown University. "}}, {"pk": 44, "model": "innovate.speaker",
+"fields": {"picture": "/static/i/speakers/leblanc.png", "sessions":
+[37], "title": "Technology Evangelist, Yahoo!", "name": "Jonathan
+LeBlanc", "details": "Jonathan LeBlanc works with the Yahoo! Developer
+Network as a technology evangelist / senior software engineer. Focusing
+on partner relationships and training, as well as external developer
+integrations, Jonathan works with and promotes emerging technologies to
+aid in the adoption and utilization of new social development
+techniques. As a software engineer, Jonathan works extensively with
+social interaction development on the web, developing new methods for
+linking social networks to drive the ideal of an open web. "}}, {"pk":
+45, "model": "innovate.speaker", "fields": {"picture":
+"/static/i/speakers/levitt_photo1.png", "sessions": [26], "title": "CEO,
+As Was", "name": "Debbie Levitt", "details": "Debbie Levitt's
+specialties are branding, marketing, UX/UI, and design. She has been
+been working with eBay sellers since 2001 and her session has been a hit
+at eBay Dev Con for 4 years. Learn more at debbielevitt.com. "}}, {"pk":
+46, "model": "innovate.speaker", "fields": {"picture":
+"/static/i/speakers/loftis.png", "sessions": [5], "title": "Sales
+Engineer, Merchant Services, PayPal", "name": "Kyle Loftis", "details":
+"Kyle Loftis has been a Sales Engineer at PayPal for 5 years. Starting
+in the world of small, sole proprietors and medium sized businesses, as
+well as working with some of the shopping cart and channel providers
+that facilitate PayPal payments for the merchants who use their
+platform. In recent years, Kyle has been supporting the Large Merchant
+segment with accepting PayPal as a form of payment and fitting PayPal
+into their back-end tools and order fulfillment systems using the latest
+products & tools that PayPal has to offer. "}}, {"pk": 47, "model":
+"innovate.speaker", "fields": {"picture":
+"/static/i/speakers/25_maler_r5.png", "sessions": [25], "title":
+"Distinguished Engineer, Identity Services, PayPal", "name": "Eve
+Maler", "details": "Eve Maler is a Distinguished Engineer in the PayPal
+Identity Services group, where she drives the development of security
+and identity strategies for enabling consumer choice in permissioning of
+personal data sharing. "}}, {"pk": 48, "model": "innovate.speaker",
+"fields": {"picture": "/static/i/speakers/mazzei.png", "sessions": [2],
+"title": "Sr. Program Manager, eBay", "name": "Tina Mazzei ", "details":
+"Tina Mazzei has been with eBay for over five years and is responsible
+for the program and operations management of the eBay Developers
+Program. She has worked closely with developers to understand their
+needs and what helps developers be build successful applications for
+eBay customers. She created the Open eBay Apps program including the on
+boarding and management processes. Tina is omnipresent at the conference
+so please feel free to talk with her about your Open eBay and Developers
+Program questions. "}}, {"pk": 49, "model": "innovate.speaker",
+"fields": {"picture": "/static/i/speakers/mcderment.png", "sessions":
+[13], "title": "Co-Founder and CEO, Freshbooks", "name": "Mike McDerment
+", "details": "Mike is the co-founder and CEO of FreshBooks, planet
+Earth's leading online invoicing and bookkeeping app for service
+oriented professionals, freelancers and teams. Back in 2003, Mike built
+FreshBooks for his design firm and scratched his own itch. Since
+launching in May 2004 FreshBooks has touched over 2,000,000 lives and
+Mike and his team dedicate themselves to being a great service for
+people who love their work, and want to focus on it - instead of
+focusing on their paperwork. "}}, {"pk": 50, "model":
+"innovate.speaker", "fields": {"picture":
+"/static/i/speakers/mciver.png", "sessions": [41, 51], "title": "VP,
+Product Management, Magento", "name": "Doug McIver", "details": "As VP
+of Product Management at Magento, Doug manages Magento's product
+strategy, roadmap and release cycles as the company continues to
+revolutionize eCommerce in 2010 and beyond. Prior to joining Magento,
+Doug served as Vice President of Products for Allurent, an industry
+leading Software-as-a-Service (SaaS) platform. Doug has also served as a
+Director of Product Management with Oracle Retail and as a Director of
+Product Management for ProfitLogic, the leading provider of retail
+merchandise optimization technology. Doug holds a Ph.D. in Geographic
+Information Systems from Boston University and a Bachelor of Arts from
+Bates College. "}}, {"pk": 51, "model": "innovate.speaker", "fields":
+{"picture": "/static/i/speakers/moayedpour.png", "sessions": [61],
+"title": "Head of Integration, SENE, PayPal", "name": "Dominique
+Moayedpour", "details": "Dominique joined PayPal in December 2006,
+focusing primarily on major large merchant and partner integrations in
+France, Italy, Spain, Netherlands, Poland and Sweden. Following the
+success of his solo efforts, Dominique has built up the SENE Integration
+Team to pursue strong growth in the region. Previously, Dominique worked
+for ValueLink (First Data) as a Presales Manager for European gift card
+services. Prior to ValueLink, he managed presales efforts for several
+payment service providers like Netgiro and Kleline. "}}, {"pk": 52,
+"model": "innovate.speaker", "fields": {"picture":
+"/static/i/speakers/26_nahari_r5.png", "sessions": [15], "title":
+"Principal Mobile & Security Architect, PayPal", "name": "Hadi Nahari",
+"details": "Hadi Nahari is a software security professional with over 18
+years of experience in software development and implementation of secure
+systems. Hadi is a frequent speaker in the US and international security
+and embedded events. He has led and contributed to various security
+projects for several high-profile companies. "}}, {"pk": 53, "model":
+"innovate.speaker", "fields": {"picture":
+"/static/i/speakers/narain.png", "sessions": [9], "title": "Product
+Marketing Manager, PayPal", "name": "Mamta Narain", "details": "Mamta
+Narain is PayPal's Global Product Marketing Lead for Financial
+Innovations. In this role, she is responsible for positioning and
+evangelizing PayPal's initiatives with global financial partners, leads
+the research efforts and industry analysis initiatives for Financial
+Innovations. Additionally, she produces collateral for global
+Conferences and Media Events. Prior to this role Mamta led complex
+cross-platform data integration projects within eBay, evangelizing
+internal initiatives across the eBay Inc. properties. Prior to eBay she
+spent several years at Fry Inc. serving in various capacities on
+eCommerce programs for top customers and building client
+relationships."}}, {"pk": 54, "model": "innovate.speaker", "fields":
+{"picture": "/static/i/speakers/nash.png", "sessions": [58, 93],
+"title": "Director, Coding Futures", "name": "Tim Nash", "details": "Tim
+Nash is a founder and director of Coding Futures, a UK company that
+provides technical support and development for charities and Non
+Government organisations. He is responsible for API development and
+security and compliance at the company as well as providing consultancy
+to large blue chip companies and government departments. "}}, {"pk": 55,
+"model": "innovate.speaker", "fields": {"picture":
+"/static/i/speakers/nemeth.png", "sessions": [56], "title": "Senior
+Software Engineer, WebAssist", "name": "Justin Nemeth", "details":
+"Justin Nemeth is a Senior Software Engineer at WebAssist, an internet
+software company based in San Diego, CA. He has a degree in
+Math/Computer Science from UCSD and specializes in Dreamweaver extension
+development, enterprise web applications, and advanced CSS
+implementations. "}}, {"pk": 56, "model": "innovate.speaker", "fields":
+{"picture": "/static/i/speakers/paralkar.png", "sessions": [3], "title":
+"Developer Technical Support Engineer, eBay", "name": "Sarika Paralkar",
+"details": "Sarika is a member of the Developer Technical Support (DTS)
+team at eBay. She works with 3rd party developers and integrators and
+helps them with API implementation and best practices."}}, {"pk": 57,
+"model": "innovate.speaker", "fields": {"picture":
+"/static/i/speakers/27_parington_r5.png", "sessions": [51], "title":
+"Integration Engineer, PayPal", "name": "Brant Partington", "details":
+"Brant is a PayPal Integration team member with responsibility to help
+drive the Magento and PayPal integration process. "}}, {"pk": 58,
+"model": "innovate.speaker", "fields": {"picture":
+"/static/i/speakers/28_patel_r5.png", "sessions": [50, 55], "title":
+"Integration Engineer, PayPal", "name": "Amish Patel", "details": "Amish
+Patel is an Integration Engineer with the PayPal Professional Services
+team. For over nine years with eBay and PayPal, he has worked with
+developers, merchants, and partners integrating across eBay and PayPal
+platforms. "}}, {"pk": 59, "model": "innovate.speaker", "fields":
+{"picture": "/static/i/speakers/patel_amol.png", "sessions": [14],
+"title": "Head of Emerging Markets, PayPal", "name": "Amol Patel",
+"details": "Amol Patel is the head of emerging markets at PayPal Mobile,
+whose responsibilities have included expanding PayPal's mobile product
+footprint across Europe and Asia Pacific as well as developing PayPal's
+mobile API solution. Previously, Amol was Founder & CEO of ConvergeLabs,
+a mobile VAS company that launched India's first mobile ticketing and
+payments service. He has held senior marketing and engineering positions
+at Intel Corporation, Cirrus Logic, Sun Microsystems, and ADC
+Telecommunications. In addition, Amol has co-authored several patents in
+the Mobile, Internet and Payments space. Amol received a BS with honors
+in EECS from the University of California at Berkeley, an MS in EE from
+Stanford University, and an MBA from the Kellogg School of Management at
+Northwestern University."}}, {"pk": 60, "model": "innovate.speaker",
+"fields": {"picture": "/static/i/speakers/patel_rekha.png", "sessions":
+[3], "title": "Manager, Developer Technical Support, eBay", "name":
+"Rekha Patel", "details": "Rekha Patel manages the developer technical
+support team at eBay. She has been with eBay for over 5 years helping
+developers consume eBay APIs. "}}, {"pk": 61, "model":
+"innovate.speaker", "fields": {"picture": "/static/i/speakers/paul.png",
+"sessions": [63], "title": "CEO, RAMSrent", "name": "Marc Paul",
+"details": "Mr. Marc F. Paul is a Senior Managing Partner in the
+RAMSrent corporation - headquarters located in Tallahassee, Florida. Mr.
+Paul is also the CEO of Paul Consulting Inc., a software development
+firm that specializes in Internet financial transactions and grant
+tracking systems. RAMSrent is an online payment portal utilized
+throughout the U.S. and is integrated with PayPal via the new Adaptive
+Payments API. The RAMSrent portal allows tenants to pay rent, submit
+applications, and pay other expenses to their property management
+company or landlord. Mr. Paul's educational background consists of
+degrees in Computer Science and Finance at Florida State University.
+"}}, {"pk": 62, "model": "innovate.speaker", "fields": {"picture":
+"/static/i/speakers/persky.png", "sessions": [33], "title": "Software
+Engineer, emmapersky.com", "name": "Emma Persky", "details": "Emma
+Persky is a vocal technology evangelist, an avid traveler and vibrant
+storyteller. You can't miss her with her bright red hair and
+distinctively British accent. When Emma is not at home in New York,
+engineering software for Purpose she can be found on an intrepid
+expedition, collecting stories for her blog, travellerwithatale.com."}},
+{"pk": 63, "model": "innovate.speaker", "fields": {"picture":
+"/static/i/speakers/prichard.png", "sessions": [6], "title": "Sr.
+Development Mgr, Bill Me Later", "name": "Ryan Prichard", "details":
+"Ryan Prichard is a Senior Manager at Bill Me Later managing the
+development efforts of the application engineering and web services
+teams. Ryan has been with the company for over 4 years and has a
+background in designing and building enterprise SOA solutions. "}},
+{"pk": 64, "model": "innovate.speaker", "fields": {"picture":
+"/static/i/speakers/prince.png", "sessions": [58, 93], "title":
+"Director, Coding Futures", "name": "Kevin Prince", "details": "Kevin
+Prince is a founder and director of Coding Futures, a UK company that
+provides technical support and development for charities and Non
+Government organizations. He is responsible for providing front end and
+Drupal development at the company as well as providing consultancy to
+companies such as NBC Universal. "}}, {"pk": 65, "model":
+"innovate.speaker", "fields": {"picture":
+"/static/i/speakers/30_regan_r5.png", "sessions": [59], "title":
+"Director, New Ventures Business Development, PayPal", "name": "Rob
+Regan", "details": "Rob Regan is the director of new ventures, business
+development at PayPal. His overall responsibilities focus on
+collaborating with emerging market and technology leaders, and
+strengthening the venture capital community's support of entrepreneurs
+building the next generation of payments applications on PayPal X.
+Throughout Rob's career, he has successfully developed new business and
+product opportunities, driving corporate strategy to penetrate untapped
+markets for startups, midsized firms and industry leaders. "}}, {"pk":
+66, "model": "innovate.speaker", "fields": {"picture":
+"/static/i/speakers/reine.png", "sessions": [60], "title": "Director,
+Business Development, PayPal", "name": "Jeff Reine", "details": "Jeff
+Reine is the Director of Digital Goods Business Development at PayPal.
+He is new to PayPal but a veteran of the online media space. Prior to
+PayPal, Jeff held business development leadership roles at imeem,
+VideoEgg and Skype. He holds a BA in International Relations & Economics
+from Tufts University and a MBA from UCLA Anderson. Jeff lives with his
+wife and daughter in San Francisco's Mission District. "}}, {"pk": 67,
+"model": "innovate.speaker", "fields": {"picture":
+"/static/i/speakers/31_rice_r5.png", "sessions": [6], "title": "Manager
+of Authorization Engineering, Bill Me Later", "name": "Pamela Rice",
+"details": "Pamela Rice is the Manager of Bill Me Later Authorization
+Engineering managing the development of the real-time credit
+authorization engine. Pamela has been with Bill Me Later for five years
+and has a background developing complex decisioning systems. "}}, {"pk":
+68, "model": "innovate.speaker", "fields": {"picture":
+"/static/i/speakers/rao.png", "sessions": [46], "title": "Co-Founder,
+iConcessionStand.com", "name": "Humberto Roa", "details": "Humberto is
+co-founder of iConcessionStand, a location aware mobile marketplace that
+won the PayPal Best App Award at the first ever iPadDevCamp in March
+2010. Humberto has been in the software industry for 13 years, and
+contributed to the development and launch of several commerce systems,
+including the Amazon Flexible Payments Service and Checkout by Amazon.
+"}}, {"pk": 69, "model": "innovate.speaker", "fields": {"picture":
+"/static/i/speakers/rubin.png", "sessions": [41], "title": "CEO,
+Magento", "name": "Roy Rubin", "details": "Roy Rubin founded Varien (the
+original company behind Magento) in 2001 as a consultancy and has since
+transformed the eCommerce platform market with the release of the
+Magento platform. In a period of 18 months, Magento surpassed the 1
+million downloads milestone and now records billions of dollars of
+transactions worldwide by tens of thousands of merchants. It is the
+fastest growing eCommerce platform in the world. A results-oriented
+executive with over 10 years of experience founding and building
+products and organizations, Roy is deeply entrenched in the eCommerce
+and open source markets and grew Magento to be a disruptive, global
+player. "}}, {"pk": 70, "model": "innovate.speaker", "fields":
+{"picture": "/static/i/speakers/33_rupe_r5.png", "sessions": [5],
+"title": "Sales Engineer, Merchant Services, PayPal", "name": "Graham
+Rupe", "details": "Graham Rupe has been with PayPal for over 5 years
+serving in several different roles. Working in the Merchant Technical
+Support group for the first few years of his tenure Graham supported
+partners ranging from small businesses to billion dollar corporations
+when it came to troubleshooting issues between their systems and PayPal.
+Recently, Graham has been consulting large merchants and partners such
+as United Airlines, GSI, American Airlines, Netflix and Lufthansa. Not
+only has Graham supported numerous partners, but he has also been
+involved in building new products as they're being developed. "}},
+{"pk": 71, "model": "innovate.speaker", "fields": {"picture":
+"/static/i/speakers/saboo.png", "sessions": [88, 36], "title": "Product
+Manager, Adaptive Payments, PayPal ", "name": "Neelam Saboo", "details":
+"Neelam Saboo is one of the product managers for Adaptive Payments. She
+is responsible for developing new solutions with bank funded payments.
+Neelam has a strong technical background with a dozen years in
+technology industry. "}}, {"pk": 72, "model": "innovate.speaker",
+"fields": {"picture": "/static/i/speakers/samet.png", "sessions": [30],
+"title": "Risk Management Expert ", "name": "Ohad Samet", "details":
+"Ohad has extensive risk management and fraud prevention background, and
+is passionate about creating the optimal, safest payment experience for
+good users while limiting and managing bad ones through technology,
+focusing on big data and machine learning techniques. "}}, {"pk": 73,
+"model": "innovate.speaker", "fields": {"picture":
+"/static/i/speakers/schalk.png", "sessions": [94, 39], "title":
+"Developer Advocate, Google ", "name": "Chris Schalk", "details": "Chris
+is a Developer Advocate at Google who works on Google App Engine and
+other Google cloud technologies. His previous experience at Google
+includes work on Google Friend Connect, Google AJAX APIs, Maps, Gears
+and Google Web Toolkit. Prior to Google, Chris was a Principal Product
+Manager at Oracle in the development tools group as well as co-author of
+\"JavaServer Faces: The Complete Reference\". In his spare time, he
+plays trumpet in local Bay Area symphonies. "}}, {"pk": 74, "model":
+"innovate.speaker", "fields": {"picture":
+"/static/i/speakers/schatt.png", "sessions": [10], "title": "Senior
+Director, Financial Innovations, PayPal", "name": "Dan Schatt",
+"details": "Dan Schatt heads Financial Innovations for PayPal. In this
+role, he is responsible for defining the business and product strategy
+for PayPal's initiatives with financial partners. Prior to PayPal, Dan
+was an industry analyst with Celent. He has also served as GM of
+Yodlee's data services group and worked as an investment banker for
+Salomon Smith Barney and held positions with Citigroup. Dan has been
+widely quoted in the media and has also written articles for American
+Banker and Bank Systems & Technology. He has presented at national and
+international venues, including the United Nations Development Program
+Roundtable on Remittances, the World Bank / APEC Dialogue on Remittance
+Systems, NACHA's Annual Payments Conference, BAI's TransPay conference,
+and The Internet Retailer conference. "}}, {"pk": 75, "model":
+"innovate.speaker", "fields": {"picture":
+"/static/i/speakers/schulte.png", "sessions": [10], "title": "SVP/CIO,
+Mercantile Bank of Michigan", "name": "John Schulte", "details": "John
+Schulte and his staff manage the information technology infrastructure
+for the bank, as well as item processing, ACH/cash management services,
+payroll services, electronic banking, and deposit/loan/credit
+card/courier operations. He is one of the original members of the team
+that founded Mercantile Bank of Michigan in 1997, a business oriented
+community bank headquartered in Grand Rapids, MI with offices throughout
+Lower Michigan. Prior to starting with Mercantile Bank, he worked as a
+commercial lender and credit manager with FMB-First Michigan Bank in
+Grand Rapids. John is a graduate of Western Michigan University (BA in
+Finance) and the ABA Stonier Graduate School of Banking. In the
+community, John serves on the Regional Advisory Board of the Arthritis
+Foundation and is a member/Past President of the Grand Rapids Exchange
+Club."}}, {"pk": 76, "model": "innovate.speaker", "fields": {"picture":
+"/static/i/speakers/35_sieber_r5.png", "sessions": [1], "title":
+"Product Manager, PayPal Payflow Gateway, PayPal", "name": "Todd
+Sieber", "details": "Todd is a Product Manager for the Payflow Gateway
+responsible forthe gateway's core processing functions, interactions,
+and support with external third-party processors, and management of the
+Payflow SDKs and protocols. "}}, {"pk": 77, "model": "innovate.speaker",
+"fields": {"picture": "/static/i/speakers/36_sisinni_r5.png",
+"sessions": [16], "title": "Director, Mobile Product Management,
+PayPal", "name": "Fabio Sisinni", "details": "Fabio Sisinni is the
+Director of Product Management of PayPal Mobile products. In this role
+he is responsible for bringing to the market mobile payment solutions
+directly and in partnerships with carriers, devices, and mobile OS
+vendors. Fabio has over ten years of global experience in the mobile
+industry."}}, {"pk": 78, "model": "innovate.speaker", "fields":
+{"picture": "/static/i/speakers/speckeen.png", "sessions": [4], "title":
+"CEO, Terapeak", "name": "Fred Speckeen", "details": "Speckeen brings
+two decades of VP- and CEO-level experience gained internationally
+across the technology, media and semiconductor fields in hands-on roles
+spanning product management, sales, marketing, and technology licensing.
+"}}, {"pk": 79, "model": "innovate.speaker", "fields": {"picture":
+"/static/i/speakers/tan.png", "sessions": [21], "title": "CEO,
+Rentlord", "name": "Colin Tan", "details": "Colin is the founder and CEO
+of Rentlord, the first dedicated social commerce platform for property.
+He has had a lifelong preoccupation with culture and technology, and as
+a former researcher at Cambridge, used to work on the insights of Walter
+Benjamin, the pioneering thinker of media studies. "}}, {"pk": 80,
+"model": "innovate.speaker", "fields": {"picture":
+"/static/i/speakers/39_vadhri_r5.png", "sessions": [13], "title":
+"Product Manager, Emerging Technologies, PayPal", "name": "Srinivas
+Vadhri", "details": "Srinivas Vadhri has been with the PayPal X Platform
+Product since its inception, and been with PayPal for six years. He is
+currently leading product efforts related B2B payments. He started his
+career as a management consultant (PWC and E&Y) and has worked in
+strategy and e-commerce for several years. "}}, {"pk": 81, "model":
+"innovate.speaker", "fields": {"picture": "/static/i/speakers/wall.png",
+"sessions": [38], "title": "Developer Evangelist, Salesforce", "name":
+"Quinton Wall", "details": "Quinton Wall is a Developer Evangelist for
+Salesforce.com where he is a regular technical contributor and speaker
+at cloud industry events and media sites. For over 15 years, Quinton has
+been at the forefront of Internet technologies being a founding member
+of the Australia Java Users Group, building the prototype for the
+Looksmart search engine, and leading engineering teams across the globe.
+Quinton now brings this wealth of experience to cloud believing that the
+future of technology and cloud computing is harnessing the power of
+convergent clouds. "}}, {"pk": 82, "model": "innovate.speaker",
+"fields": {"picture": "/static/i/speakers/winding.png", "sessions":
+[31], "title": "Program Operations and Best Practices, PayPal", "name":
+"Pam Winding", "details": "Pam Winding runs the global Best Practices
+Integration Initiative and Partner Certification Programs for PayPal.
+Pam joined PayPal as a Product Manager in 2008 and now focuses on best
+practice guidelines, tools, and materials that help merchants and
+partners optimize their PayPal integrations to increase sales and
+conversions. Pam started her career working for local museums where she
+became passionate about using technology to teach and to solve everyday
+problems. Working for technology companies like LeapFrog and Intuit
+sharpened her focus on using customer feedback and research to develop
+ease-of-use principles and best practices for the products she managed.
+Pam has over 14 years experience in product and program management, web
+analytics and strategic planning. She also leads operations for eBay's
+Women in Technology (eWIT) organization. "}}, {"pk": 83, "model":
+"innovate.speaker", "fields": {"picture":
+"/static/i/speakers/woloshin.png", "sessions": [34, 61, 97], "title":
+"Professional Services Engineering, PayPal", "name": "Steve Woloshin",
+"details": "Steve has been leading some of PayPal's most significant
+integrations since he joined PayPal over 3 years ago. He brings a depth
+of experience with him having served for over 20 years in the payments
+industry, as a processor and a merchant. "}}, {"pk": 84, "model":
+"innovate.speaker", "fields": {"picture":
+"/static/i/speakers/40_xue_r5.png", "sessions": [61, 34], "title":
+"Principal Integration Engineer, PayPal", "name": "Harry Xue",
+"details": "Harry Xue has been a Principal Integration Engineer at
+PayPal for four years. During this time, he has worked with a diverse
+portfolio of merchants on integrating PayPal as a form of payment."}},
+{"pk": 85, "model": "innovate.speaker", "fields": {"picture":
+"/static/i/speakers/ivaskevicius.png", "sessions": [82], "title":
+"Merchant Technical Engineer ", "name": "Stephen Ivaskevicius",
+"details": "Stephen Ivaskevicius has worked at PayPal (X.com) for over
+nine years. In his current role as a Merchant Technical Support Manager,
+his team provides support to large/enterprise merchants with technical
+problems."}}, {"pk": 86, "model": "innovate.speaker", "fields":
+{"picture": "/static/i/speakers/frauendorfer.png", "sessions": [82],
+"title": "Merchant Technical Engineer", "name": "Eric Frauendorfer",
+"details": "Eric has worked at PayPal for just over 6 \u00bd yrs., most
+recently as a Level 2 Merchant Technical Engineer, supporting merchants
+in integration, development and troubleshooting issues with PayPal SDK's
+and other PayPal Products. Eric attended college for Web Development and
+Programming, graduating from Lincoln Southeast Community College in
+2004. Eric has programmed in all different Languages but his favorite is
+PHP. Coding is one of his favorite pastimes as well helping others with
+backend programming for their websites."}}, {"pk": 87, "model":
+"innovate.speaker", "fields": {"picture":
+"/static/i/speakers/kellberg.png", "sessions": [83], "title": "Lead
+Integration Engineer, Professional Services", "name": "Kurt Kellberg",
+"details": "Kurt Kellberg has been with PayPal for over 6 years serving
+in several different roles. Over the last 5 years he has helped both new
+and existing merchants large and small troubleshoot their technical
+issues as well as giving them guidance on integrating a PayPal product
+into their ecommerce solution.\r\n"}}, {"pk": 88, "model":
+"innovate.speaker", "fields": {"picture": "/static/i/speakers/cole.png",
+"sessions": [83], "title": "Integration Engineer", "name": "Matt Cole",
+"details": "Matt Cole is an Integration Engineer with the PayPal
+Professional Services team. Having worked in the office supply industry
+for nine years, he knows just how quickly merchants want to be up and
+running and accepting payments, and that sometimes, the simplest
+solution is the best. Matt works with merchants and developers every day
+to help them integrate PayPal's payment solutions quickly and
+effectively."}}, {"pk": 89, "model": "innovate.speaker", "fields":
+{"picture": "/static/i/speakers/Al-Bassam.png", "sessions": [85],
+"title": "VP Payment Services, S1 Corporation", "name": "Kareem
+Al-Bassam", "details": "Kareem Al-Bassam leads S1's payment services
+including the provision of billpay and other money movement services,
+such as PayPal P2P, across multiple consumer channels. Prior to S1,
+Kareem held positions with Netspend and TSYS Card Tech with a specific
+focus on multi-country card and merchant management solutions."}},
+{"pk": 90, "model": "innovate.speaker", "fields": {"picture":
+"/static/i/speakers/usmanabbasi.png", "sessions": [86], "title": "Sr.
+Manager, Mobile Engineering", "name": "Usman Abbasi", "details": "Usman
+Abbasi is the Director of Mobile Development at PayPal. Usman is
+responsible for PayPal's mobile initatives, including Mobile Express
+Checkout, P2P Smartphone clients (iPhone, Android, RIM and Symbian and
+the Mobile Payments Library. He has over a decade of experience leading
+and managing teams to build large-scale web/internet applications. Prior
+to his current position, he managed the Core Infrastructure team that
+built the foundation of the PayPal payment system."}}, {"pk": 91,
+"model": "innovate.speaker", "fields": {"picture":
+"/static/i/speakers/anash.png", "sessions": [86], "title": "Vice
+President of Search & Platform Products, LinkedIn", "name": "Adam Nash",
+"details": "Adam Nash is Vice President of Search & Platform Products at
+LinkedIn, the world's largest professional network. Before LinkedIn, he
+held a variety of strategic and technical roles at eBay, Atlas Venture,
+Preview Systems, and Apple. He holds Bachelor's and Master's degrees in
+Computer Science from Stanford University, and an MBA from Harvard
+Business School."}}, {"pk": 92, "model": "innovate.speaker", "fields":
+{"picture": "/static/i/speakers/hanyuan.png", "sessions": [86], "title":
+"Director of Mobile and Platform Business Solutions Engineering, eBay",
+"name": "Han Yuan", "details": "Han Yuan is Director of Mobile and
+Platform Business Solutions Engineering where he leads the organization
+that builds mobile products for theeBay.com brand. Han runs both R&D and
+QA for mobile engineering on all major mobile platforms including mobile
+web, Android, iOS, RIM, and Windows Phone 7 series. Han has a dual role
+heading up eBay's incubator where his current projects include
+IP-enabled devices and various advertising related initiatives."}},
+{"pk": 93, "model": "innovate.speaker", "fields": {"picture":
+"/static/i/speakers/lynch.png", "sessions": [87], "title": "Manager,
+Developer Technical Services EU", "name": "Deborah Lynch", "details":
+"Deborah is the manager of PayPal's Developer Technical Services team in
+Europe, supporting developer's integrations with the platform APIs.
+Prior to PayPal, Deborah spent her career in software development. She
+started as a software engineer with ICL/Fujitsu developing online
+content management systems including the initial BBC website. Following
+further programming roles in Sydney, Deborah returned to Dublin and
+joined Sabre Holdings where she held a role of Software Development
+Manager providing software solutions for travel agents, airlines and
+consumers. Deborah holds a BSc in Computer Science and Software
+Engineering from Dublin Institute of Technology."}}, {"pk": 94, "model":
+"innovate.speaker", "fields": {"picture":
+"/static/i/speakers/carter.png", "sessions": [87], "title": "Developer
+Technical Services Lead Support Engineer", "name": "Brandee Carter",
+"details": "Brandee is a lead in PayPal's Developer Technical Services
+System team (DTS) which provides technical support/services for the
+PayPal Platform product, APIs, SDK, etc. She has been with PayPal just
+shy of 5 years and has over 10 years E-Commerce experience. Brandee
+holds a BS in Web Technologies."}}, {"pk": 95, "model":
+"innovate.speaker", "fields": {"picture":
+"/static/i/speakers/gorbunova.png", "sessions": [88], "title": "Platform
+Product Manager", "name": "Yuliya Gorbunova", "details": "Yuliya
+Gorbunova is a Product Manager on the PayPal Platform, responsible for
+platform infrastructure and SDKs. Yuliya joined eBay in 2004 and
+transferred to PayPal in 2006. During her six years of tenure, Yuliya
+has held multiple engineering and product management responsibilities.
+Most recently, Yuliya has been involved with Identity related products
+such as Permissions Services. Prior to PayPal, Yuliya was a Product
+Manager working in the Speech Recognition field, building voice
+recognition and speech-to-speech translation systems. Yuliya received a
+bachelor's degree in Computer Engineering from Santa Clara
+University."}}, {"pk": 96, "model": "innovate.speaker", "fields":
+{"picture": "/static/i/speakers/ramani.png", "sessions": [89], "title":
+"Senior Director - Software Development, Oracle", "name": "Nandini
+Ramani", "details": "Nandini Ramani runs the Java Client Group at Oracle
+and has a long history of creating innovation and futures at Sun
+Microsystems. Nandini launched the JavaFX Platform and tools and had
+been actively involved in JavaFX since its inception in May 2007. Prior
+to joining the client group, Nandini was in the Software CTO Office
+driving the emerging technologies group for incubation projects. She has
+a background in both hardware and software, having worked in hardware
+architecture and simulation team in the Accelerated Graphics group and
+the graphics and media team in the JavaME group. She was involved in the
+development of XML standards, as Co-Chair of the W3C Scalable Vector
+Graphics working group and as a member of the W3C Compound Document
+Formats working group. She was also a member of several graphics and UI
+related expert groups in the JCP."}}, {"pk": 97, "model":
+"innovate.speaker", "fields": {"picture":
+"/static/i/speakers/jamessenior.png", "sessions": [90, 92], "title":
+"Web Evangelist, Microsoft", "name": "James Senior", "details": "James
+is based in Seattle and is Microsoft's Web Evangelist working on
+WebMatrix, ASP.NET MVC and jQuery. He is a noted author, blogger and
+speaker and helps developers make smart, impartial decisions about which
+technologies to use to build modern web applications. Prior to Seattle,
+James lived and worked for Microsoft in the UK for three years
+evangelizing Microsoft technology platforms. Before joining Microsoft he
+worked for Intel as a Software Developer and Technical Project Manager
+for four years and ran his own consultancy building software for small
+and medium businesses in Europe.\r\n\r\nTwitter handle: @jsenior"}},
+{"pk": 98, "model": "innovate.speaker", "fields": {"picture":
+"/static/i/speakers/vittoriobertocci.png", "sessions": [90], "title":
+"Senior Architect Evangelist, Microsoft", "name": "Vittorio Bertocci",
+"details": "Vittorio Bertocci is a Senior Architect Evangelist in
+Developer and Platform Evangelism and a key member of the extended
+engineering team that produces Microsoft's claims-based platform
+components (Windows Identity Foundation and ADFS 2.0). He is responsible
+for identity evangelism for the .NET developer community. In 2001 he
+joined Microsoft Italy, where he focused on Web services security. In
+2005, Vittorio moved to Redmond, where he worked with Fortune 100
+companies on cutting-edge SOA projects. In the last five years, his
+mission has led him to speak in 23 countries and 4 continents. Vittorio
+is a regular speaker at conferences such as Microsoft PDC, TechEd (USA,
+Europe, Australia, New Zealand, Japan), TechDays Belux, Gartner Summit,
+European Identity Conference, IDWorld, OreDev, NDC, IASA, Basta and many
+others. Vittorio holds a master degree in Computer Science and is a
+published author: follow him at www.cloudidentity.net."}}, {"pk": 99,
+"model": "innovate.speaker", "fields": {"picture":
+"/static/i/speakers/default_speaker.png", "sessions": [91], "title":
+"Co-founder and CTO, Netbiscuits", "name": "Christian Reitz", "details":
+"Christian is co-founder and CTO of Netbiscuits and is overall
+responsible for Software Development and Professional Services. He
+manages the software development roadmap for Netbiscuits and oversees
+the professional services unit of Netbiscuits delivering high quality
+mobile software solutions to more than 200 business customers in 40+
+countries and managed more than 800 successful mobile projects in the
+last 8 years. Christian holds a Master's Degree in Business and
+Engineering from the University of Kaiserslautern, Germany. He received
+the award for Best Graduate of his MBE class in 2000."}}, {"pk": 100,
+"model": "innovate.speaker", "fields": {"picture":
+"/static/i/speakers/robertbirkenheuer.png", "sessions": [91], "title":
+"Senior Manager Professional Services, Netbiscuits", "name": "Robert
+Birkenheuer", "details": "Robert Birkenheuer has long time experience in
+web application development. As Senior Manager Professional Services and
+team leader at Netbiscuits, he is responsible for the customer liaison
+and support of major brands such as eBay, Maggi and the US director
+service WhitePages. After working for several companies in the agency
+sector, Robert Birkenheuer joined Netbiscuits in 2007."}}, {"pk": 101,
+"model": "innovate.speaker", "fields": {"picture":
+"/static/i/speakers/parikh.png", "sessions": [92], "title": "Lead
+Engineer, Developer Technical Services", "name": "Aalap Parikh",
+"details": "Aalap is a Lead Engineer Lead in PayPal's Developer
+Technical Services group."}}, {"pk": 102, "model": "innovate.speaker",
+"fields": {"picture": "/static/i/speakers/chang.png", "sessions": [95],
+"title": "Principal, Norwest Venture Partners", "name": "Tim Chang",
+"details": "Tim brings a combination of operational, technical and
+international business experience to Norwest Venture Partners. Tim
+focuses on investments in wireless and digital media as well as business
+development initiatives in Asia-Pacific. Tim has recently invested in
+and joined the board of directors of 3Jam, Brite Semiconductor and Lumos
+Labs. He led NVP's investment in PCH International and also works with
+the boards of deCarta, Double Fusion and Veveo. Prior to joining NVP in
+2006, Tim was a principal at Gabriel Venture Partners where he was
+actively involved in over a dozen wireless-related deals. Tim built
+Gabriel's wireless sector practice and helped establish business
+development capabilities through strong, strategic relationships across
+the wireless value chain, particularly in Asia-Pacific. For a complete
+biography of Tim, please visit www.nvp.com.\r\n\r\nTwitter:
+@timechange"}}, {"pk": 103, "model": "innovate.speaker", "fields":
+{"picture": "/static/i/speakers/vishalgurbuxani.png", "sessions": [95],
+"title": "Co-Founder, Mobclix", "name": "Vishal Gurbuxani", "details":
+"Vishal is Co-founder at Mobclix (www.mobclix.com), the industry's
+largest targeted mobile ad exchange -- the first open marketplace for
+mobile developers, advertisers, ad networks and agencies. Mr. Gurbuxani
+is focused on the Technology and Vision for the company. Mr. Gurbuxani
+has also authored numerous patents for large scale device management and
+personalization. Many of the key insights that Mr. Gurbuxani has learned
+through driving business value through technical execution, have been
+cultivated for the Mobclix mobile platform. Mr. Gurbuxani graduated with
+Honors from Santa Clara University with both an M.S. and B.S. in
+Computer Engineering."}}, {"pk": 104, "model": "innovate.speaker",
+"fields": {"picture": "/static/i/speakers/paulchen.png", "sessions":
+[95], "title": "Director Business Development, Papaya Mobile", "name":
+"Paul Chen", "details": "As Director of Business Development at Papaya
+Mobile, Paul is responsible for building the ecosystem of game and
+application developers that support the Papaya social network for
+Android devices. Prior to joining Papaya Mobile, Paul served as Product
+Manager for NVIDIA\u2019s line of Tegra application processors that
+cater to mobile devices which range from Smartphones to Tablets. Paul
+has also held various engineering roles at Advanced Micro Devices and
+covered the technology sector as an investment banking analyst for
+Salomon Smith Barney. Paul received his B.S. in Electrical Engineering
+and Computer Science at U.C. Berkeley and M.B.A from Columbia
+University.\r\n\r\nTwitter: @pbpaul128"}}, {"pk": 105, "model":
+"innovate.speaker", "fields": {"picture":
+"/static/i/speakers/karlmehta.png", "sessions": [95], "title": "Founder
+& CEO, PlaySpan", "name": "Karl Mehta", "details": "Karl Mehta is
+Founder & CEO of PlaySpan, Inc, a leader in monetization platform
+development for online games, social networks and new media. Karl brings
+more than 18 years of experience to PlaySpan in founding, building and
+funding technology start-ups in the U.S. and international markets.
+Prior to founding PlaySpan, Karl was part of the founding team at
+MobileAria Inc. (acquired by Wireless Matrix) based in Mountain View and
+co-founder/ CEO of OmniLabs Inc., based in Singapore and India. Prior to
+that, he held executive positions at Hughes, leading new business and
+technology development. Karl won the 'Entrepreneur of the Year 2010'
+Award from Ernst & Young for Northern California and is a Charter member
+of TiE-Silicon Valley and a board member of Ecosystem Ventures."}},
+{"pk": 107, "model": "innovate.speaker", "fields": {"picture":
+"/static/i/speakers/OBrien.png", "sessions": [95, 59], "title":
+"Managing Director, Lightspeed Venture Partners", "name": "Eric
+O'Brien", "details": "Eric has been at Lightspeed for over 10 years and
+invests in a variety of sectors including technology-enabled financial
+services, datacenter infrastructure and SaaS. Additionally, he helps
+oversee Lightspeed's investment efforts in China. Eric currently serves
+on the boards of directors of Aquantia, Bling Nation, Evolv On-Demand,
+Exclara, PCH, Pivot 3, Project Slice and Streamlite. He holds a BA in
+Economics from Harvard and an MBA from Stanford."}}, {"pk": 108,
+"model": "innovate.speaker", "fields": {"picture":
+"/static/i/speakers/Khare.png", "sessions": [59], "title": "Vice
+President, Venrock", "name": "Dev Khare", "details": "Dev Khare is Vice
+President at Venrock, a premier venture capital firm with offices in
+Palo Alto, New York, Cambridge, MA, and Israel. Dev focuses on software,
+Internet, mobile and payments investments; sits on the boards of Aha
+Mobile, Lavante and SlideShare; and supports Venrock's investments in
+Aria Systems, BillFloat and Redbeacon. Dev previously co-founded Covigo,
+a mobile application server company, acquired by Symbol Technologies. He
+blogs at http://www.nextwala.com and is on Twitter @dkhare"}}, {"pk":
+109, "model": "innovate.speaker", "fields": {"picture":
+"/static/i/speakers/Holleran.png", "sessions": [59, 95], "title":
+"Venture Partner, Emergence Capital Partners", "name": "Matt Holleran",
+"details": "Matt Holleran is a Venture Partner at Emergence Capital
+Partners. Emergence is the leading venture firm in Technology Enabled
+Services. He defines new investment strategies, sources new investments,
+and works closely with a few portfolio companies. Matt has walked in the
+shoes of executive teams at each stage of a business application
+company's development. He played key roles in sales, marketing and
+business development at market leading companies salesforce.com,
+Clarify, and Datasweep. Prior to his software career, Matt was in the
+private equity group at Morgan Stanley and worked at Bain & Company.
+Matt has a BA in Engineering Sciences and Economics from Dartmouth
+College and an MBA from Harvard.\r\n\r\nTwitter: @mattholleran "}},
+{"pk": 110, "model": "innovate.speaker", "fields": {"picture":
+"/static/i/speakers/Stalder.png", "sessions": [59], "title": "General
+Partner, Matrix Partners", "name": "Dana Stalder", "details": "Dana
+Stalder is a Silicon Valley based general partner at Matrix Partners,
+where he invests in early stage software and internet companies. Dana's
+experience cuts across multiple disciplines including sales, marketing,
+finance, technology and product management at companies such as eBay,
+Netscape, PayPal and Respond.com. Dana joined Matrix in 2008 from
+PayPal, where he was a senior vice president and managed all business
+operations, including product, sales, marketing and technology. He is
+also a board member at iRise, QuinStreet, GOGII, Polyvore and
+Zong.\r\n\r\nTwitter: @dcstalder"}}, {"pk": 113, "model":
+"innovate.speaker", "fields": {"picture": "/static/i/speakers/Bain.png",
+"sessions": [24, 96], "title": "Co-Founder and President, MedPayOnline",
+"name": "Clayton Bain", "details": "Clayton Bain is one of the founders
+and president of Medpayonline.com. MedPayOnline is a healthcare focused
+patient payment processor. The MedPayOnline suite of services provides a
+complete and secure payment solution used by hospitals and physicians,
+and all ancillary care providers. Our goal is to allow patients to be
+independent and connected to their providers, their finances, and their
+healthcare information."}}, {"pk": 114, "model": "innovate.speaker",
+"fields": {"picture": "/static/i/speakers/sridharvembu.png", "sessions":
+[96], "title": "CEO, Zoho", "name": "Sridhar Vembu", "details": "Sridhar
+Vembu co-founded Zoho Corp (originally known as AdventNet) in 1996, and
+is now the CEO. The company originally started as a provider of network
+management software to equipment vendors, and Sridhar has been
+instrumental in broadening and deepening its software portfolio. He grew
+up in Chennai, India, and attended IIT Chennai and graduate school at
+Princeton University\r\n\r\nTwitter: @zoho"}}, {"pk": 115, "model":
+"innovate.speaker", "fields": {"picture": "/static/i/speakers/das.png",
+"sessions": [97], "title": "Sr. Manager, PayPal Professional Services
+Team ", "name": "Souvik Das", "details": "Souvik Das leads the PayPal
+Professional Services team. He has been in PayPal for over six and a
+half years. Souvik started off his career in PayPal as an engineer
+building the basic building blocks of the currently existing merchant
+services product line. He has led many high performing engineering teams
+and currently works on integrating strategic partners onto the PayPal
+platform."}}, {"pk": 116, "model": "innovate.speaker", "fields":
+{"picture": "/static/i/speakers/Typaldos.png", "sessions": [97],
+"title": "Founder and President, Kachingle", "name": "Cynthia Typaldos",
+"details": "Cynthia is founder and president of Kachingle, a social
+payment system for free digital stuff. She started her career as a
+software developer at Bank of America, then moved to product marketing
+and management after receiving an MBA from MIT. Later she worked at Sun
+Microsystems, and then founded of two other internet companies - GolfWeb
+(1995) and RealCommunities (2000). She believes that the combination of
+micropayments, subscriptions, and voluntary contributions for online
+digital content and applications will change the world.\r\n\r\nTwitter:
+@typaldos and @kachingle"}}, {"pk": 117, "model": "innovate.speaker",
+"fields": {"picture": "/static/i/speakers/stevejarvis.png", "sessions":
+[36], "title": "Vice President, Marketing, Small & Midsize Business,
+Concur", "name": "Steve Jarvis", "details": "Steve Jarvis is Vice
+President of Marketing for Concur's Small & Midsize Business segment
+providing strategic leadership for brand, differentiation, advertising,
+and market development functions. Prior to joining Concur in 2010,
+Jarvis was Alaska Airlines' Vice President of Marketing, Sales and
+Customer Experience. In this role he was responsible for design of the
+airline's customer experience, setting priorities for differentiation in
+a lower cost industry environment. He also led customer research, brand
+and advertising, sales functions, marketing programs, customer care, and
+in-flight product.\r\n\r\nTwitter: @sbjarvis"}}, {"pk": 118, "model":
+"innovate.speaker", "fields": {"picture":
+"/static/i/speakers/Goldsmith.png", "sessions": [36], "title": "Director
+of Engineering, HomeAway", "name": "Steve Goldsmith", "details": "I lead
+the software engineering team responsible for building HomeAway.com's
+common homeowner tools, including our common owner management platform,
+our common owner profile system (single sign on) and our upcoming
+traveler checkout & payment systems. I am passionate about global
+software development, building great teams and building usable, scalable
+distributed systems that make our customers love us."}}, {"pk": 119,
+"model": "innovate.speaker", "fields": {"picture":
+"/static/i/speakers/Boonstra.png", "sessions": [95], "title":
+"Co-Founder, Layar", "name": "Claire Boonstra", "details": "Claire is a
+true net native and widely recognized mobile internet specialist.
+Although having a background in Civil Engineering (Delft University of
+Technology), Claire has worked in Mobile , Marketing and New Media since
+the start of her professional career in 2001. Employers included KPN
+Mobile (introducing i-mode to the European market), Unilever (European
+Brand Manager) and Talpa Digital (new online-media ventures). Together
+with her co-founders Maarten Lens-FitzGerald and Raimo van der Klein,
+Claire started Mobile Monday Amsterdam, SPRXmobile, and in 2009 Layar.
+Claire is primarily responsible for facilitating the third party brands,
+agencies and developer ecosystem of Layar. Claire was named one of the
+top 10 most influential women in technology by FastCompany and Laptop
+Magazine. "}}, {"pk": 120, "model": "innovate.speaker", "fields":
+{"picture": "/static/i/speakers/tanaka.png", "sessions": [99], "title":
+"Technical Design Lead, PayPal Technical Design Lead, PayPal Platform",
+"name": "Ray Tanaka", "details": "Ray Tanaka is Technical Design Lead on
+the PayPal Platform Team. In what he would describe as a prior life, Ray
+was Architect for PayPal\u2019s Web Services APIs and Sandbox. These
+days he is determined to make the new Platform easy to use and flexible
+enough to meet the needs of all developers that want to enable payments.
+Outside of PayPal, he enjoys sleeping, digital photography, college
+sports, tinkering with gadgets and spending time with his family."}},
+{"pk": 121, "model": "innovate.speaker", "fields": {"picture":
+"/static/i/speakers/Bailey.png", "sessions": [12], "title": "Sr. Product
+Manager, Carlson Marketing", "name": "Tracy Bailey", "details": "Tracy
+Bailey provides leadership, direction and product expertise tied to
+Carlson Marketing's payment product portfolio. Her responsibilities
+include serving as the primary expert on prepaid marketplace trends and
+competitors; overall product branding; sales collateral; training; and
+assessing current products, services and pricing strategies to determine
+market requirements in each product and market. Tracy aligns herself
+directly with the prepaid leadership, business development, operations
+and partner relations teams to create and enhance the products based on
+customer and market insight."}}, {"pk": 122, "model":
+"innovate.speaker", "fields": {"picture":
+"/static/i/speakers/Holub.png", "sessions": [19], "title": "Senior
+Product Manager, Ooyala", "name": "Alex Holub", "details": "Alex Holub
+helps drive product strategy and development across all of Ooyala's
+products. At Ooyala he has launched numerous innovative products in the
+areas of online video monetization and analytics. He holds a PhD from
+the California Institute of Technology and MS in Computer Science from
+Cornell University."}}, {"pk": 123, "model": "innovate.speaker",
+"fields": {"picture": "/static/i/speakers/CChang.png", "sessions": [],
+"title": "Sr. Manager of Product Development, PayPal", "name":
+"Catherine Chang", "details": "Catherine Chang is the Product
+Development Manager on the PayPal team. Prior to joining the PayPal, she
+led the eBay API team for 5 years. She has extensive experience in
+building APIs and Platforms. She received her master's degrees in
+computer science and mathematics from the Brigham Young University,
+Utah."}}, {"pk": 124, "model": "innovate.speaker", "fields": {"picture":
+"/static/i/speakers/Murthy.png", "sessions": [], "title": "Corporate
+Architect, PayPal", "name": "Sharad Murthy", "details": "Sharad is a
+Corporate Architect at PayPal. He has been an eBay employee for 3 years;
+and transitioned to PayPal within the past year. Sharad specializes in
+security, complex event processing, identity services, open social
+applications and large scale distributed computing. Prior to joining
+PayPal, Sharad spent 18 years at other R&D organizations specializing in
+computer networking, instrumentation and industrial control."}}, {"pk":
+125, "model": "innovate.speaker", "fields": {"picture":
+"/static/i/speakers/default_speaker.png", "sessions": [], "title":
+"Principal Engineer, PayPal", "name": "Saleem Shafi", "details": "Saleem
+studied Computer Science at the University of Texas at Austin and worked
+in several small, local companies before joining PayPal in 2007. He is
+curerntly working on the new Adaptive Payments products and Adaptive
+Accounts APIs. "}}, {"pk": 126, "model": "innovate.speaker", "fields":
+{"picture": "/static/i/speakers/shah.png", "sessions": [], "title":
+"Developer Evangelist, PayPal", "name": "Rasesh Shah", "details":
+"Rasesh Shah is the technology evangelist for the PayPal X Developer
+Network helping developers to monetize their ideas and applications
+using PayPal Payments Platform. Prior to PayPal, Rasesh worked at eBay
+building an ecommerce platform and helped opening up this platform to
+build verticals and applications. Rasesh has more than 15 years of
+experience in B2B/B2C ecommerce, Mobile , online advertising and
+Enterprise applications. "}}, {"pk": 127, "model": "innovate.speaker",
+"fields": {"picture": "/static/i/speakers/Yella.png", "sessions": [],
+"title": "Software Engineer, PayPal", "name": "Yenkata Yella",
+"details": "Venkata Yella is a development lead for the one of the new
+PayPal teams. Prior to PayPal, Venkata held multiple engineering
+positions at Sun Microsystems. Venkata has more than 13 years experience
+in the software industry and hold a Master's degree in Computer Science
+from the University of Arizona."}}, {"pk": 138, "model":
+"innovate.speaker", "fields": {"picture":
+"/static/i/speakers/default_speaker.png", "sessions": [30], "title":
+"GSN Digital/WorldWinner", "name": "Michael Wrobleski", "details":
+"Michael Wrobleski works for GSN Digital/WorldWinner"}}, {"pk": 128,
+"model": "innovate.speaker", "fields": {"picture":
+"/static/i/speakers/srikanth.png", "sessions": [99], "title": "Principal
+Engineer, PayPal", "name": "Srikanth Nandiraju", "details": "Srikanth
+Nandiraju is a designer and a developer who has a love for creativity
+and specializes in front-end and back-end technologies. He spends most
+of his time experimenting new product ideas on web and
+devices.\r\n\r\nFollow Srikanth on Twitter @nandiraju and be sure to
+checkout some of his experiments on the PayPal labs website"}}, {"pk":
+129, "model": "innovate.speaker", "fields": {"picture":
+"/static/i/speakers/damon.png", "sessions": [23], "title": "Sr.
+Director, Product Development", "name": "Damon Hougland", "details":
+"Damon Hougland is a geek. He is the Senior Director of the PayPal
+Platform. This means he leads the Product Development teams focused on
+creating PayPal's API service suites. He is also co-author of three
+books on Java and wireless technologies. He has a passion for all
+technologies that are viral and disruptive. More than anything he wants
+to make developers on the PayPal Platform successful beyond their
+wildest dreams."}}, {"pk": 130, "model": "innovate.speaker", "fields":
+{"picture": "/static/i/speakers/default_speaker.png", "sessions": [24],
+"title": "Manager, Sales Operations, PayPal", "name": "Tim Bueno",
+"details": "Tim Bueno is a Manager in the Sales Operations group at
+PayPal."}}, {"pk": 131, "model": "innovate.speaker", "fields":
+{"picture": "/static/i/speakers/default_speaker.png", "sessions": [24],
+"title": "Product Marketing Manager, PayPal", "name": "Nick Vos",
+"details": "Nick is a Product Marketing Manager for PayPal."}}, {"pk":
+132, "model": "innovate.speaker", "fields": {"picture":
+"/static/i/speakers/default_speaker.png", "sessions": [24], "title":
+"Marketing Consumer Senior Manager, PayPal", "name": "Dennis Pereira",
+"details": "Dennis is a Marketing Consumer Senior Manager at PayPal."}},
+{"pk": 133, "model": "innovate.speaker", "fields": {"picture":
+"/static/i/speakers/Creighton.png", "sessions": [22], "title": "Managing
+Director, GWC Media", "name": "Geoff Creighton", "details": "Geoff
+Creighton is a consultant providing the development force behind
+Haymarket Consumer Media's world-leading motorsport websites including
+autosport.com and castroldriverrankings.com. In the fast-paced world of
+Formula 1, he develops paid content platforms, web and mobile
+applications - as well as providing live text commentary of the track
+action at every grand prix. Prior to working in the digital space, he
+spent several years developing quality control inspection technology for
+nuclear fuel at the Sellafield site in his native northern England.
+Geoff holds a BEng in Microelectronics and Software Engineering from the
+University of Newcastle upon Tyne.\r\n\r\nTwitter: @gcreighton"}},
+{"pk": 134, "model": "innovate.speaker", "fields": {"picture":
+"/static/i/speakers/Berthe.png", "sessions": [14, 1], "title": "Director
+of Mobile Financial Services, Grameen Foundation", "name": "Elizabeth
+Berthe", "details": "Elizabeth leads Grameen Foundation Technology
+Center's efforts to transform the microfinance sector by providing
+solutions for mobile phone-based financial services. Grameen
+Foundation's work in this space has been so successful that the
+organization recently won an award from the Marketplace for Innovative
+Financial Solutions for Development for its work providing mobile-money
+solutions in Kenya. Prior to working at Grameen Foundation, Elizabeth
+worked in various roles in corporate finance, strategic planning,
+negotiations and consulting in the United States, China, and France. She
+holds a Master's in International Management from Thunderbird, the
+Garvin School of International Management, and a B.A in marketing from
+the University of Southern California. She is a member of the advisory
+council for Youth Assets, a non-profit organization that works to
+empower disadvantaged youth in Swaziland with information through
+technology, and is a founding member and co-chair for Women Advancing
+Microfinance - Pacific Northwest Chapter."}}, {"pk": 135, "model":
+"innovate.speaker", "fields": {"picture":
+"/static/i/speakers/Downie.png", "sessions": [95], "title": "VP
+Marketing, ngmoco", "name": "Clive Downie", "details": "Clive Downie is
+Vice President, Marketing at ngmoco. His marketing and live teams are
+responsible for the acquisition, retention and monetization of players
+across ngmoco's range of freemium games. Prior to ngmoco he spent over
+15 years at Electronic Arts in various marketing positions."}}, {"pk":
+136, "model": "innovate.speaker", "fields": {"picture":
+"/static/i/speakers/Ho.png", "sessions": [30], "title": "Fraud & Risk
+Director, Electronic Arts", "name": "Nelson Ho", "details": "Nelson Ho
+is the Fraud Manager at Electronic Arts and has been the main leader in
+building EA's fraud management program. As EA transitions into the D2C
+digital business model, Nelson is responsible to help minimize payment,
+internal, and in-game fraud for EA. "}}, {"pk": 137, "model":
+"innovate.speaker", "fields": {"picture": "/static/i/speakers/Lan.png",
+"sessions": [94], "title": "Developer Programs Engineer, Google App
+Engine, Google", "name": "Ikai Lan", "details": "Ikai Lan is a software
+engineer working for the Developer Programs groups at Google, Inc. Prior
+to Google, he worked as a software engineer building social applications
+at LinkedIn and a systems integration consultant delivering VoIP
+applications at Citrix Systems. Ikai is an avid technologist, consuming
+volumes of material about new programming languages, framework or
+service. In his free time, he enjoys the California outdoors, winning
+Chinese language karaoke contests and playing flag football. He resides
+in San Francisco, CA, where he watches in anguish as his favorite
+professional sports teams implode season after season."}}, {"pk": 139,
+"model": "innovate.speaker", "fields": {"picture":
+"/static/i/speakers/default_speaker.png", "sessions": [60], "title":
+"Digital Product Manager, Autosport at Haymarket Publishing", "name":
+"Jim Foster", "details": "Jim is a Digital Product Manager, Autosport at
+Haymarket Publishing."}}, {"pk": 140, "model": "innovate.speaker",
+"fields": {"picture": "/static/i/speakers/default_speaker.png",
+"sessions": [30], "title": "Founder, Tyler Projects", "name": "Ronnie
+Ghee Boon Neo", "details": "Ronnie Ghee Boon Neo is one of the founders
+of Tyler Projects."}}, {"pk": 141, "model": "innovate.speaker",
+"fields": {"picture": "/static/i/speakers/default_speaker.png",
+"sessions": [30], "title": "VP Strateic Solutions, Plimus", "name":
+"Simon Jones", "details": "A Silicon Valley veteran, Simon has worked
+with software companies like Interwoven, Hyperion and Adobe for over a
+dozen years. Simon helps develop and set Plimus' strategy to ensure our
+offerings, and our message, meet the needs of the marketplace."}},
+{"pk": 142, "model": "innovate.speaker", "fields": {"picture":
+"/static/i/speakers/default_speaker.png", "sessions": [30], "title":
+"Co-Founder/CEO/Chairman of the Board, Tagged", "name": "Greg Tseng",
+"details": "Greg Tseng co-founded Tagged in October 2004 and has served
+as its CEO since inception. He leads the company\u2019s product team and
+business operations."}}, {"pk": 143, "model": "innovate.speaker",
+"fields": {"picture": "/static/i/speakers/default_speaker.png",
+"sessions": [99], "title": "R&D Engineer, PayPal", "name": "Mehryar
+Mansoor", "details": "Mehryar is a R & D Engineer at PayPal."}}]

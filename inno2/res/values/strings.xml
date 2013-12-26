@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Innovate 2010</string>
+    <string name="action_settings">Settings</string>
+    <string name="checkIn_btn">CheckIn Button</string>
+    <string name="friends_btn">Friends Button</string>
+    <string name="gallery_btn">Gallery Button</string>
+    <string name="program_btn">Program Button</string>
+    <string name="speakers_btn">Speadkers Button</string>
+    <string name="hackathon_btn">Hackathon Button</string>
+    <string name="social_btn">Social Button</string>
+    <string name="highlights_btn">Highlights Button</string>
+    <string name="map_btn">Map Button</string>
+    <string name="sponsor_btn">Sponsor Button</string>
+    <string name="product_selector_btn">ProductSelector Button</string>
+    <string name="leaderboard_btn">LeaderBoard Button</string>
+    <string name="badges_btn">Badges Button</string>
+    <string name="home_btn">Home Button</string>
+    <string name="info_btn">Info Button</string>
+    <string name="url">http://www.baidu.com</string>
+    <string name="feeds_speakers2">https://apps1.paypal-labs.com/ppi/innovate/feeds/speakers/</string>
+    <string name="feeds_speakers">http://www.jiaozuoye.com/joj/upload/download/1959</string>
+    <string name="speaker_photo">the photo of the speaker</string>
+    <string name="arrow">the arrow of the list row</string>
+    <string name="hidden_arrow">the hidden arrow of the detail speaker</string>
+    <string name="name">Praveen Alavilli</string>
+    <string name="title">Developer Evangelist, PayPal</string>
+    <string name="detail">Praveen Alavilli is the developer evangelist for the PayPal X Developer Network, helping developers to monetize their ideas and applications using the PayPal Payments Platform. Prior to PayPal, Praveen worked at Amazon.com and AOL. </string>
+    <string name="head">Warning!</string>
+    <string name="message">Sorry, network is not available! Please try to connect to the network</string>
+    <string name="ok">OK</string>
+
+</resources>

@@ -1,0 +1,212 @@
+<!-- 此布局采用相对布局，并用ImageView，只适应3.2英寸屏幕 -->
+<!-- xmlns:app="http://schemas.android.com/apk/res/com.topcoder.innovate" -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/home_background"
+    tools:context=".HomeActivity" >
+
+    <TableRow
+        android:id="@+id/row1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="82dp" >
+
+        <ImageView
+            android:id="@+id/checkIn_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:contentDescription="@string/checkIn_btn"
+            android:scaleType="fitXY"
+            android:src="@drawable/home_menucheckin" />
+
+        <View
+            android:layout_width="30dip"
+            android:layout_height="match_parent"
+            android:background="@color/divider" />
+
+        <ImageView
+            android:id="@+id/program_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:contentDescription="@string/program_btn"
+            android:src="@drawable/home_menuprogram" />
+
+        <View
+            android:layout_width="24dip"
+            android:layout_height="match_parent"
+            android:background="@color/divider" />
+
+        <ImageView
+            android:id="@+id/speakers_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:contentDescription="@string/checkIn_btn"
+            android:src="@drawable/home_menuspeakers" />
+    </TableRow>
+
+    <TableRow
+        android:id="@+id/row2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/row1"
+        android:layout_marginLeft="20dip"
+        android:layout_marginTop="6dp" >
+
+        <ImageView
+            android:id="@+id/hackathon_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:contentDescription="@string/checkIn_btn"
+            android:src="@drawable/home_menuhackathon" />
+
+        <View
+            android:layout_width="20dip"
+            android:layout_height="match_parent"
+            android:background="@color/divider" />
+
+        <ImageView
+            android:id="@+id/gallery_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:contentDescription="@string/checkIn_btn"
+            android:src="@drawable/home_menugallery" />
+
+        <View
+            android:layout_width="20dip"
+            android:layout_height="match_parent"
+            android:background="@color/divider" />
+
+        <ImageView
+            android:id="@+id/social_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:contentDescription="@string/checkIn_btn"
+            android:src="@drawable/home_menusocial" />
+    </TableRow>
+
+    <TableRow
+        android:id="@+id/row3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/row2"
+        android:layout_marginLeft="25dip" >
+
+        <ImageView
+            android:id="@+id/highlights_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:contentDescription="@string/checkIn_btn"
+            android:src="@drawable/home_menuparties" />
+
+        <View
+            android:layout_width="30dip"
+            android:layout_height="match_parent"
+            android:background="@color/divider" />
+
+        <ImageView
+            android:id="@+id/map_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:contentDescription="@string/checkIn_btn"
+            android:src="@drawable/home_menumap" />
+
+        <View
+            android:layout_width="25dip"
+            android:layout_height="match_parent"
+            android:background="@color/divider" />
+
+        <ImageView
+            android:id="@+id/sponsors_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:contentDescription="@string/checkIn_btn"
+            android:src="@drawable/home_menusponsors" />
+    </TableRow>
+
+    <TableRow
+        android:id="@+id/row4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/row3"
+        android:layout_marginLeft="28dip"
+        android:layout_marginTop="4dp" >
+
+        <ImageView
+            android:id="@+id/product_selector_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:contentDescription="@string/checkIn_btn"
+            android:src="@drawable/home_menuproduct" />
+
+        <View
+            android:layout_width="28dip"
+            android:layout_height="match_parent"
+            android:background="@color/divider" />
+
+        <ImageView
+            android:id="@+id/leaderborad_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:contentDescription="@string/checkIn_btn"
+            android:src="@drawable/home_leaders" />
+
+        <View
+            android:layout_width="22dip"
+            android:layout_height="match_parent"
+            android:background="@color/divider" />
+
+        <ImageView
+            android:id="@+id/badges_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:contentDescription="@string/checkIn_btn"
+            android:src="@drawable/home_badges" />
+    </TableRow>
+
+    <ImageView
+        android:id="@+id/home_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginBottom="3dp"
+        android:layout_marginLeft="20dp"
+        android:background="@drawable/btn_selector"
+        android:clickable="true"
+        android:contentDescription="@string/home_btn"
+        android:src="@drawable/home_icon" />
+
+    <ImageView
+        android:id="@+id/info_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="3dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/btn_selector"
+        android:clickable="true"
+        android:contentDescription="@string/info_btn"
+        android:src="@drawable/info_icon" />
+
+</RelativeLayout>

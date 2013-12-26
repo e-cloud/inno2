@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="divider">#00bfbfbf</color>
+    <color name="btn_background">#00ffffff</color>
+    <color name="btn_pressed">#88bfbfbf</color>
+    <color name="namecolor">#ffffff</color>
+    <color name="titlecolor">#a1a3a6</color>
+    <color name="progressbarbackground">#a1a3a6</color>
+    <color name="transparent">#00000000</color>
+
+</resources>

@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 此布局采用线性布局，并用ImageView来当按钮，透明View来充当divider，利用layout_weight，适应多种尺寸屏幕 -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/speakerdetails_background"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dip"
+        android:layout_margin="0dp"
+        android:layout_weight="41"
+        android:background="@color/divider" >
+
+        <ImageView
+            android:id="@+id/hide_arrow"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginBottom="16dp"
+            android:layout_marginLeft="27dp"
+            android:background="@drawable/btn_selector"
+            android:clickable="true"
+            android:contentDescription="@string/hidden_arrow"
+            android:rotation="180" />
+    </RelativeLayout>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="0dip"
+        android:layout_weight="93" >
+
+        <View
+            android:layout_width="0dip"
+            android:layout_height="match_parent"
+            android:layout_weight="4.4"
+            android:background="@color/divider" />
+
+        <!-- android:fadingEdgeLength and android:requiresFadingEdge are to set the fading effect of the listview -->
+
+        <LinearLayout
+            android:layout_width="0dip"
+            android:layout_height="match_parent"
+            android:layout_weight="44"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <ImageView
+                    android:id="@+id/detail_speaker_picture"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dip"
+                    android:contentDescription="@string/speaker_photo"
+                    android:src="@drawable/saboo" />
+
+                <TextView
+                    android:id="@+id/detail_speaker_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/detail_speaker_name"
+                    android:layout_below="@+id/detail_speaker_name"
+                    android:text="@string/title"
+                    android:textColor="@color/titlecolor"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/detail_speaker_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@id/detail_speaker_picture"
+                    android:layout_toRightOf="@id/detail_speaker_picture"
+                    android:text="@string/name"
+                    android:textColor="@color/namecolor"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/speaker_detail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="10dp"
+                android:fadingEdgeLength="5dp"
+                android:requiresFadingEdge="vertical"
+                android:scrollbars="vertical"
+                android:text="@string/detail"
+                android:textColor="@color/namecolor"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="0dip"
+            android:layout_height="match_parent"
+            android:layout_weight="4.1"
+            android:background="@color/divider" />
+    </TableRow>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="0dip"
+        android:layout_weight="9" >
+
+        <TableRow
+            android:layout_width="0dip"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_weight="2"
+            android:gravity="center_vertical|center_horizontal" >
+
+            <ImageView
+                android:id="@+id/home_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical|center_horizontal|center"
+                android:background="@drawable/btn_selector"
+                android:clickable="true"
+                android:contentDescription="@string/home_btn"
+                android:scaleType="matrix"
+                android:src="@drawable/home_icon" />
+        </TableRow>
+
+        <View
+            android:layout_width="0dip"
+            android:layout_height="match_parent"
+            android:layout_weight="8"
+            android:background="@color/divider" />
+
+        <TableRow
+            android:layout_width="0dip"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_weight="2"
+            android:gravity="center_vertical|center_horizontal" >
+
+            <ImageView
+                android:id="@+id/info_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical|center_horizontal|center"
+                android:background="@drawable/btn_selector"
+                android:clickable="true"
+                android:contentDescription="@string/info_btn"
+                android:scaleType="matrix"
+                android:src="@drawable/info_icon" />
+        </TableRow>
+    </TableRow>
+
+</LinearLayout>

@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 此布局采用线性布局，并用ImageView来当按钮，透明View来充当divider，利用layout_weight，适应多种尺寸屏幕 -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/home_background"
+    android:orientation="vertical" >
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dip"
+        android:layout_weight="39"
+        android:background="@color/divider" />
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="0dip"
+        android:layout_weight="143" >
+
+        <View
+            android:layout_width="0dip"
+            android:layout_height="match_parent"
+            android:layout_weight="5.5"
+            android:background="@color/divider" />
+
+        <WebView
+            android:id="@+id/web_view"
+            android:layout_width="0dip"
+            android:layout_height="match_parent"
+            android:layout_weight="50"
+            android:scrollbars="vertical" />
+
+        <View
+            android:layout_width="0dip"
+            android:layout_height="match_parent"
+            android:layout_weight="4"
+            android:background="@color/divider" />
+    </TableRow>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="0dip"
+        android:layout_weight="9" >
+
+        <TableRow
+            android:layout_width="0dip"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="2"
+            android:gravity="center_vertical|center_horizontal" >
+
+            <ImageView
+                android:id="@+id/home_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:background="@drawable/btn_selector"
+                android:clickable="true"
+                android:contentDescription="@string/home_btn"
+                android:scaleType="matrix"
+                android:src="@drawable/home_icon" />
+        </TableRow>
+
+        <View
+            android:layout_width="0dip"
+            android:layout_height="match_parent"
+            android:layout_weight="8"
+            android:background="@color/divider" />
+
+        <TableRow
+            android:layout_width="0dip"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="2"
+            android:gravity="center_vertical|center_horizontal" >
+
+            <ImageView
+                android:id="@+id/info_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@drawable/btn_selector"
+                android:clickable="true"
+                android:contentDescription="@string/info_btn"
+                android:scaleType="matrix"
+                android:src="@drawable/info_icon" />
+        </TableRow>
+    </TableRow>
+
+</LinearLayout>
