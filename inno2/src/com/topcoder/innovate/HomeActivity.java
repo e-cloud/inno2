@@ -13,6 +13,7 @@ public class HomeActivity extends Activity {
 
 	private ImageView infoButton;
 	private ImageView speakerButton;
+	private ImageView mapButton;
 	private static final String TAG = "Innovate";
 
 	@Override
@@ -49,6 +50,7 @@ public class HomeActivity extends Activity {
 		});
 
 		speakerButton = (ImageView) findViewById(R.id.speakers_btn);
+
 		speakerButton.setOnClickListener(new OnClickListener() {
 			@Override
 			public void onClick(View v) {
@@ -56,6 +58,16 @@ public class HomeActivity extends Activity {
 				Log.d(TAG, "clicked on speakers button");
 				Intent intent = new Intent(HomeActivity.this,
 						SpeakerListAcitivity.class);
+				startActivity(intent);
+			}
+		});
+		mapButton = (ImageView) findViewById(R.id.map_btn);
+		mapButton.setOnClickListener(new OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				// TODO Auto-generated method stub
+				Log.d(TAG, "clicked on speakers button");
+				Intent intent = new Intent(HomeActivity.this, MapActivity.class);
 				startActivity(intent);
 			}
 		});

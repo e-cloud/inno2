@@ -55,6 +55,7 @@ public class Speaker implements Serializable {
 			tmp.insert(0, 'x');
 		}
 		tmp.delete(tmp.indexOf(".png"), tmp.length());
+		System.out.println(tmp.toString().toLowerCase(Locale.US));
 
 		return tmp.toString().toLowerCase(Locale.US);
 	}
