@@ -29,26 +29,34 @@ import com.topcoder.innovate.model.Speaker;
  * 
  */
 public class DataRetriever {
-	public List<Speaker> retrieveAllSpeakers(Activity activity) {
-		// 将资源标识符转为字符串
-		String url = activity.getResources().getString(R.string.feeds_speakers);
-		// 存储获得得Speaker，用于将数据返回
-		List<Speaker> speakerArrayList = new ArrayList<Speaker>();
-		// 指定服务器端URL
-		HttpGet httpGet = new HttpGet(url);
+
+	// 此方法专注于获取网路上的json数据转换成JSONArray，并返回
+	private static JSONArray retrieveData(String destination)
+			throws ClientProtocolException, IOException, JSONException {
+		HttpGet httpGet = new HttpGet(destination);
 		HttpClient client = new DefaultHttpClient();
+		HttpResponse response = null;
+		JSONArray jsonArray = null;
 
-		HttpResponse response;
+		response = client.execute(httpGet);
+
+		HttpEntity httpEntity = response.getEntity();
+		String jsonString = EntityUtils.toString(httpEntity);
+		jsonArray = new JSONArray(jsonString.replace('\n', ' '));
+
+		return jsonArray;
+	}
+
+	public static List<Speaker> retrieveAllSpeakers(Activity activity) {
+
+		// 存储获得得Speaker，用于将数据返回
+		List<Speaker> speakerArrayList = null;
 		try {
-			response = client.execute(httpGet);
+			// 获取网络数据
+			JSONArray jsonArray = retrieveData(activity.getResources()
+					.getString(R.string.feeds_speakers));
 
-			// 获取响应实体
-			HttpEntity httpEntity = response.getEntity();
-			// 将响应实体转换为字符串
-			String jsonString = EntityUtils.toString(httpEntity);
-
-			// 将字符串转换为JSONArray
-			JSONArray jsonArray = new JSONArray(jsonString.replace('\n', ' '));
+			speakerArrayList = new ArrayList<Speaker>();
 			Speaker speaker;
 
 			for (int i = 0; i < jsonArray.length(); i++) {
@@ -78,13 +86,13 @@ public class DataRetriever {
 				// 将speaker放到speakerArrayList中去
 				speakerArrayList.add(speaker);
 			}
+		} catch (JSONException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
 		} catch (ClientProtocolException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} catch (JSONException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
@@ -92,29 +100,18 @@ public class DataRetriever {
 	}
 
 	public static List<Blingcoord> retrieveAllBlingcoords(Activity activity) {
-		// 将资源标识符转为字符串
-		String url = activity.getResources().getString(R.string.bling);
+
 		// 存储获得得Blingcoord，用于将数据返回
 		List<Blingcoord> blingArrayList = null;
-		// 指定服务器端URL
-		HttpGet httpGet = new HttpGet(url);
-
-		HttpClient httpClient = new DefaultHttpClient();
-
 		try {
 
-			HttpResponse httpResponse = httpClient.execute(httpGet);
-			// 获取响应实体
-			HttpEntity httpEntity = httpResponse.getEntity();
-			// 将响应实体转换为字符串
-			String jsonString = EntityUtils.toString(httpEntity);
-
-			// 将字符串转为JSONArray
-			JSONArray jsonArray = new JSONArray(jsonString);
-			Blingcoord blingcoord;
+			// 获取网络数据
+			JSONArray jsonArray = retrieveData(activity.getResources()
+					.getString(R.string.bling));
 
 			// 在已获取网络数据后才创建数组实例
 			blingArrayList = new ArrayList<Blingcoord>();
+			Blingcoord blingcoord;
 
 			for (int i = 0; i < jsonArray.length(); i++) {
 				/**
@@ -140,9 +137,7 @@ public class DataRetriever {
 
 				// 将blingcoord放到blingArrayList中去
 				blingArrayList.add(blingcoord);
-
 			}
-
 		} catch (JSONException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -153,7 +148,6 @@ public class DataRetriever {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-
 		return blingArrayList;
 	}
 }

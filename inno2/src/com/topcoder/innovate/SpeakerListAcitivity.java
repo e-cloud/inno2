@@ -146,12 +146,11 @@ public class SpeakerListAcitivity extends Activity {
 		public void handleMessage(Message msg) {
 			super.handleMessage(msg);
 			Bundle data = msg.getData();
-			String val = data.getString("value");
+			String val = data.getString("download");
 			Log.i(TAG, "message-->" + val);
-			if (weakref != null) {
+			if (weakref != null && val == "succeed") {
 				weakref.get().setAdapter();
 			}
-
 		}
 	}
 
@@ -167,14 +166,17 @@ public class SpeakerListAcitivity extends Activity {
 			@Override
 			public void run() {
 				// TODO: http request.
-				DataRetriever retriever = new DataRetriever();
-				mSpeakers = retriever
+				mSpeakers = DataRetriever
 						.retrieveAllSpeakers(SpeakerListAcitivity.this);
-				Log.i(TAG, "list size = " + mSpeakers.size());
 
 				Message msg = new Message();
 				Bundle data = new Bundle();
-				data.putString("value", "download succeed.");
+				if (mSpeakers != null) {
+					Log.i(TAG, "list size = " + mSpeakers.size());
+					data.putString("download", "succeed");
+				} else {
+					data.putString("download", "failed");
+				}
 				msg.setData(data);
 				handler.sendMessage(msg);
 			}
@@ -228,7 +230,7 @@ public class SpeakerListAcitivity extends Activity {
 
 				convertView = mLayoutInflater.inflate(R.layout.speaker, parent,
 						false);
-
+				// 关联数据与UI
 				viewHolder.mImage = (ImageView) convertView
 						.findViewById(R.id.speaker_picture);
 				viewHolder.mName = (TextView) convertView
@@ -260,10 +262,8 @@ public class SpeakerListAcitivity extends Activity {
 
 			viewHolder.mName.setText(speaker.getName());
 			viewHolder.mTitle.setText(speaker.getTitle());
-
 			return convertView;
 		}
-
 	}
 
 	@SuppressWarnings("unused")
