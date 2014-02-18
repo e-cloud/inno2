@@ -2,7 +2,7 @@
 <resources>
 
     <string name="app_name">Innovate 2010</string>
-    <string name="action_settings">Settings</string>
+    <string name="clearcache">Clear Cache</string>
     <string name="checkIn_btn">CheckIn Button</string>
     <string name="friends_btn">Friends Button</string>
     <string name="gallery_btn">Gallery Button</string>
@@ -31,5 +31,7 @@
     <string name="message">Sorry, network is not available! Please try to connect to the network</string>
     <string name="ok">OK</string>
     <string name="bling">http://www.jiaozuoye.com/joj/upload/download/1961</string>
+    <string name="blingfilename">bling.txt</string>
+    <string name="speakersfilename">speakers.txt</string>
 
 </resources>

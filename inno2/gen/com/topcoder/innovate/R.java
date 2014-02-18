@@ -460,7 +460,6 @@ containing a value of this type.
         public static final int home=0x7f0a0000;
     }
     public static final class string {
-        public static final int action_settings=0x7f06001b;
         public static final int app_name=0x7f06001a;
         public static final int arrow=0x7f06002f;
         /**   Title for notification shown when GooglePlayServices needs to be
@@ -488,7 +487,9 @@ containing a value of this type.
         public static final int auth_client_using_bad_version_title=0x7f060014;
         public static final int badges_btn=0x7f060028;
         public static final int bling=0x7f060037;
+        public static final int blingfilename=0x7f060038;
         public static final int checkIn_btn=0x7f06001c;
+        public static final int clearcache=0x7f06001b;
         /**  Button in confirmation dialog to enable Google Play services.  Clicking it
         will direct user to application settings of Google Play services where they
         can enable it [CHAR LIMIT=40] 
@@ -581,6 +582,7 @@ containing a value of this type.
         public static final int social_btn=0x7f060022;
         public static final int speaker_photo=0x7f06002e;
         public static final int speakers_btn=0x7f060020;
+        public static final int speakersfilename=0x7f060039;
         public static final int sponsor_btn=0x7f060025;
         public static final int title=0x7f060032;
         public static final int url=0x7f06002b;

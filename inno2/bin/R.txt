@@ -289,7 +289,6 @@ int layout activity_webview 0x7f030006
 int layout activity_webview1 0x7f030007
 int layout speaker 0x7f030008
 int menu home 0x7f0a0000
-int string action_settings 0x7f06001b
 int string app_name 0x7f06001a
 int string arrow 0x7f06002f
 int string auth_client_needs_enabling_title 0x7f060015
@@ -300,7 +299,9 @@ int string auth_client_requested_by_msg 0x7f060019
 int string auth_client_using_bad_version_title 0x7f060014
 int string badges_btn 0x7f060028
 int string bling 0x7f060037
+int string blingfilename 0x7f060038
 int string checkIn_btn 0x7f06001c
+int string clearcache 0x7f06001b
 int string common_google_play_services_enable_button 0x7f060006
 int string common_google_play_services_enable_text 0x7f060005
 int string common_google_play_services_enable_title 0x7f060004
@@ -342,6 +343,7 @@ int string program_btn 0x7f06001f
 int string social_btn 0x7f060022
 int string speaker_photo 0x7f06002e
 int string speakers_btn 0x7f060020
+int string speakersfilename 0x7f060039
 int string sponsor_btn 0x7f060025
 int string title 0x7f060032
 int string url 0x7f06002b

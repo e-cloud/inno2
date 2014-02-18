@@ -3,7 +3,11 @@
  */
 package com.topcoder.innovate.util;
 
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -13,12 +17,13 @@ import org.apache.http.client.ClientProtocolException;
 import org.apache.http.client.HttpClient;
 import org.apache.http.client.methods.HttpGet;
 import org.apache.http.impl.client.DefaultHttpClient;
-import org.apache.http.util.EntityUtils;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
 import android.app.Activity;
+import android.content.Context;
+import android.util.Log;
 
 import com.topcoder.innovate.R;
 import com.topcoder.innovate.model.Blingcoord;
@@ -29,21 +34,51 @@ import com.topcoder.innovate.model.Speaker;
  * 
  */
 public class DataRetriever {
+	private final static String TAG = "Dataretriever";
 
-	// 此方法专注于获取网路上的json数据转换成JSONArray，并返回
-	private static JSONArray retrieveData(String destination)
-			throws ClientProtocolException, IOException, JSONException {
-		HttpGet httpGet = new HttpGet(destination);
+	private static void retrieveDataAsCache(String url, String filename,
+			String targetDir) throws ClientProtocolException, IOException {
+		HttpGet httpGet = new HttpGet(url);
 		HttpClient client = new DefaultHttpClient();
 		HttpResponse response = null;
+		response = client.execute(httpGet);
+		HttpEntity httpEntity = response.getEntity();
+
+		// 创建文件输出流将获得的网络数据存储到指定目录中
+		File cacheFile = new File(targetDir, filename);
+		Log.i(TAG, cacheFile.getAbsolutePath());
+		FileOutputStream fos = new FileOutputStream(cacheFile);
+		httpEntity.writeTo(fos);
+		fos.flush();
+		fos.close();
+		Log.i(TAG, "stored the file " + filename
+				+ " retrieve from the Internet.");
+	}
+
+	private static JSONArray retrieveData(Context context, String url,
+			String filename) throws JSONException, IOException {
+		File cachedir = context.getCacheDir();
+		File readFile = new File(cachedir.getAbsolutePath(), filename);
+
+		// 如果缓存文件不存在，则下载
+		if (!readFile.exists()) {
+			retrieveDataAsCache(url, filename, context.getCacheDir()
+					.getAbsolutePath());
+			Log.i(TAG, "download a file as cache.");
+		}
 		JSONArray jsonArray = null;
 
-		response = client.execute(httpGet);
+		// 读取缓存文件
+		InputStream is = new FileInputStream(readFile);
+		StringBuffer out = new StringBuffer();
+		byte[] b = new byte[4096];
+		for (int n; (n = is.read(b)) != -1;) {
+			out.append(new String(b, 0, n));
+		}
+		is.close();
 
-		HttpEntity httpEntity = response.getEntity();
-		String jsonString = EntityUtils.toString(httpEntity);
-		jsonArray = new JSONArray(jsonString.replace('\n', ' '));
-
+		// 转换成json数据对象
+		jsonArray = new JSONArray(out.toString().replace('\n', ' '));
 		return jsonArray;
 	}
 
@@ -53,8 +88,10 @@ public class DataRetriever {
 		List<Speaker> speakerArrayList = null;
 		try {
 			// 获取网络数据
-			JSONArray jsonArray = retrieveData(activity.getResources()
-					.getString(R.string.feeds_speakers));
+			JSONArray jsonArray = retrieveData(activity, activity
+					.getResources().getString(R.string.feeds_speakers),
+					activity.getResources()
+							.getString(R.string.speakersfilename));
 
 			speakerArrayList = new ArrayList<Speaker>();
 			Speaker speaker;
@@ -106,8 +143,9 @@ public class DataRetriever {
 		try {
 
 			// 获取网络数据
-			JSONArray jsonArray = retrieveData(activity.getResources()
-					.getString(R.string.bling));
+			JSONArray jsonArray = retrieveData(activity, activity
+					.getResources().getString(R.string.bling), activity
+					.getResources().getString(R.string.blingfilename));
 
 			// 在已获取网络数据后才创建数组实例
 			blingArrayList = new ArrayList<Blingcoord>();
@@ -150,4 +188,5 @@ public class DataRetriever {
 		}
 		return blingArrayList;
 	}
+
 }
