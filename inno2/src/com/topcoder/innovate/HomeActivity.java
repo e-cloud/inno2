@@ -1,11 +1,22 @@
 package com.topcoder.innovate;
 
 import java.io.File;
+import java.io.IOException;
+import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.List;
+
+import org.apache.http.client.ClientProtocolException;
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
 
 import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
+import android.content.res.Resources;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
@@ -13,6 +24,10 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.ImageView;
+import android.widget.Toast;
+
+import com.topcoder.innovate.model.Speaker;
+import com.topcoder.innovate.util.DataRetriever;
 
 public class HomeActivity extends Activity {
 
@@ -27,14 +42,16 @@ public class HomeActivity extends Activity {
 		super.onCreate(savedInstanceState);
 		Log.i(TAG, "create home activity.");
 		setContentView(R.layout.activity_home);
-
 		init(savedInstanceState);
+		final LoadDataTask ldt = new LoadDataTask(HomeActivity.this);
+		ldt.execute();
+
 	}
 
 	private void init(Bundle savedInstanceState) {
 
 		mProgressDialog = new ProgressDialog(HomeActivity.this);
-		mProgressDialog.setMessage("A message");
+		mProgressDialog.setMessage("Loading Data");
 		mProgressDialog.setIndeterminate(true);
 		mProgressDialog.setProgressStyle(ProgressDialog.STYLE_HORIZONTAL);
 		mProgressDialog.setCancelable(false);
@@ -64,6 +81,7 @@ public class HomeActivity extends Activity {
 				Log.d(TAG, "clicked on speakers button");
 				Intent intent = new Intent(HomeActivity.this,
 						SpeakerListAcitivity.class);
+				intent.putExtras(HomeActivity.this.getIntent());
 				startActivity(intent);
 			}
 		});
@@ -124,5 +142,121 @@ public class HomeActivity extends Activity {
 
 		// The directory is now empty so delete it
 		return dir.delete();
+	}
+
+	private class LoadDataTask extends AsyncTask<Void, Integer, Integer> {
+
+		private Context context = null;
+
+		public LoadDataTask(Context context) {
+			this.context = context;
+		}
+
+		/*
+		 * (non-Javadoc)
+		 * 
+		 * @see android.os.AsyncTask#onPreExecute()
+		 */
+		@Override
+		protected void onPreExecute() {
+			// TODO Auto-generated method stub
+			super.onPreExecute();
+
+			mProgressDialog.show();
+		}
+
+		@Override
+		protected Integer doInBackground(Void... params) {
+			// TODO Auto-generated method stub
+			// 存储获得得Speaker，用于将数据返回
+			List<Speaker> speakerArrayList = null;
+			try {
+				Resources res = context.getResources();
+
+				// 获取网络数据
+				JSONArray jsonArray = DataRetriever.retrieveData(context,
+						res.getString(R.string.feeds_speakers),
+						res.getString(R.string.speakersfilename));
+
+				speakerArrayList = new ArrayList<Speaker>();
+				Speaker speaker;
+
+				for (int i = 0; i < jsonArray.length(); i++) {
+					/**
+					 * 服务器返回的数据是JSONArray，在JSONArray里面有不同的JSONObject，
+					 * 在JSONObject中“fields“名称后面得值是JSONObject，
+					 * 我们需要的就是这个JSONObject
+					 */
+					JSONObject jsonObject = jsonArray.getJSONObject(i)
+							.getJSONObject("fields");
+					// 初始化Speaker
+					speaker = new Speaker();
+					// 获得jsonObj中的相应名称后面的值，并保存在speaker中的相应域中
+					speaker.setName(jsonObject.getString("name"));
+					speaker.setDetails(jsonObject.getString("details"));
+					speaker.setPicture(jsonObject.getString("picture"));
+					/**
+					 * 由于sessions后面的值是一个JSONArray数组 所以得先获得这个数组，然后将数组里面得值存放
+					 * 在List中
+					 */
+					JSONArray jsonArrayTemp = jsonObject
+							.getJSONArray("sessions");
+					List<String> tmp = new ArrayList<String>();
+					for (int j = 0; j < jsonArrayTemp.length(); j++) {
+						tmp.add(jsonArrayTemp.getString(j));
+					}
+					speaker.setSessionIds(tmp);
+					// 获得jsonObj中的"title"名称后面得值，并保存在speaker中的title域中
+					speaker.setTitle(jsonObject.getString("title"));
+					// 将speaker放到speakerArrayList中去
+					speakerArrayList.add(speaker);
+					if (jsonArray.length() > 0) {
+						publishProgress((int) (i * 100 / jsonArray.length()));
+					}
+				}
+			} catch (JSONException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			} catch (ClientProtocolException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			// 将Speaker list序列化后保存在Intent，以便传给SpeakerListActivity
+			Intent intent = ((HomeActivity) context).getIntent();
+			intent.putExtra("speakers", (Serializable) speakerArrayList);
+			return speakerArrayList.size();
+		}
+
+		/*
+		 * (non-Javadoc)
+		 * 
+		 * @see android.os.AsyncTask#onProgressUpdate(Progress[])
+		 */
+		@Override
+		protected void onProgressUpdate(Integer... values) {
+			// TODO Auto-generated method stub
+			super.onProgressUpdate(values);
+
+			mProgressDialog.setIndeterminate(false);
+			mProgressDialog.setMax(100);
+			mProgressDialog.setProgress(values[0]);
+		}
+
+		/*
+		 * (non-Javadoc)
+		 * 
+		 * @see android.os.AsyncTask#onPostExecute(java.lang.Object)
+		 */
+		@Override
+		protected void onPostExecute(Integer result) {
+			// TODO Auto-generated method stub
+			super.onPostExecute(result);
+			mProgressDialog.dismiss();
+			Toast.makeText(context, "Loaded " + result + " speakers.",
+					Toast.LENGTH_SHORT).show();
+		}
 	}
 }

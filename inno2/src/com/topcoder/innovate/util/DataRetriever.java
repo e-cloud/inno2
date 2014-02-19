@@ -36,7 +36,7 @@ import com.topcoder.innovate.model.Speaker;
 public class DataRetriever {
 	private final static String TAG = "Dataretriever";
 
-	private static void retrieveDataAsCache(String url, String filename,
+	public static void retrieveDataAsCache(String url, String filename,
 			String targetDir) throws ClientProtocolException, IOException {
 		HttpGet httpGet = new HttpGet(url);
 		HttpClient client = new DefaultHttpClient();
@@ -55,10 +55,12 @@ public class DataRetriever {
 				+ " retrieve from the Internet.");
 	}
 
-	private static JSONArray retrieveData(Context context, String url,
-			String filename) throws JSONException, IOException {
-		File cachedir = context.getCacheDir();
-		File readFile = new File(cachedir.getAbsolutePath(), filename);
+	// 准备缓存数据
+	public static void prepareCacheFile(Context context, String url,
+			String filename) throws ClientProtocolException, IOException {
+
+		File readFile = new File(context.getCacheDir().getAbsolutePath(),
+				filename);
 
 		// 如果缓存文件不存在，则下载
 		if (!readFile.exists()) {
@@ -66,6 +68,16 @@ public class DataRetriever {
 					.getAbsolutePath());
 			Log.i(TAG, "download a file as cache.");
 		}
+	}
+
+	// 获取数据，返回JSONArray
+	public static JSONArray retrieveData(Context context, String url,
+			String filename) throws JSONException, IOException {
+
+		prepareCacheFile(context, url, filename);
+		File readFile = new File(context.getCacheDir().getAbsolutePath(),
+				filename);
+
 		JSONArray jsonArray = null;
 
 		// 读取缓存文件

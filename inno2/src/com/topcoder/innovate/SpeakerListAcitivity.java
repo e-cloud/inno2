@@ -3,19 +3,15 @@
  */
 package com.topcoder.innovate;
 
-import java.lang.ref.WeakReference;
 import java.lang.reflect.Field;
 import java.util.List;
 
-import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
-import android.os.Handler;
-import android.os.Message;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -29,7 +25,6 @@ import android.widget.ListView;
 import android.widget.TextView;
 
 import com.topcoder.innovate.model.Speaker;
-import com.topcoder.innovate.util.DataRetriever;
 import com.topcoder.innovate.util.NetworkDetector;
 
 /**
@@ -42,10 +37,6 @@ public class SpeakerListAcitivity extends Activity {
 	private ListView mListView;
 	private static final String TAG = "Innovate";
 	private List<Speaker> mSpeakers;
-
-	private WeakReference<SpeakerListAcitivity> wfsla = new WeakReference<SpeakerListAcitivity>(
-			this);
-	private Handler handler = new MyHandler(wfsla);
 
 	/*
 	 * (non-Javadoc)
@@ -62,8 +53,6 @@ public class SpeakerListAcitivity extends Activity {
 		// mSpeakers = loadDataFromAsset();
 
 		if (NetworkDetector.isNetworkConnected(getApplicationContext())) {
-
-			createDownloadThread();
 
 			mListView = (ListView) findViewById(R.id.listview);
 			homeButton = (ImageView) findViewById(R.id.home_btn);
@@ -107,6 +96,11 @@ public class SpeakerListAcitivity extends Activity {
 					startActivity(intent);
 				}
 			});
+
+			mSpeakers = (List<Speaker>) getIntent().getSerializableExtra(
+					"speakers");
+			setAdapter();
+
 		} else {
 			new AlertDialog.Builder(SpeakerListAcitivity.this)
 					.setTitle(R.string.head)
@@ -125,55 +119,26 @@ public class SpeakerListAcitivity extends Activity {
 		}
 	}
 
-	private static class MyHandler extends Handler {
-		WeakReference<SpeakerListAcitivity> weakref = null;
-
-		public MyHandler(WeakReference<SpeakerListAcitivity> weakref) {
-			this.weakref = weakref;
-		}
-
-		@Override
-		public void handleMessage(Message msg) {
-			super.handleMessage(msg);
-			Bundle data = msg.getData();
-			String val = data.getString("download");
-			Log.i(TAG, "message-->" + val);
-			if (weakref != null && val == "succeed") {
-				weakref.get().setAdapter();
-			}
-		}
-	}
-
 	private void setAdapter() {
 		SpeakerAdapter speakerAdapter = new SpeakerAdapter(this, mSpeakers);
 		mListView.setAdapter(speakerAdapter);
 	}
 
-	@SuppressLint("NewApi")
-	// 创建下载线程
-	private void createDownloadThread() {
-		new Thread(new Runnable() {
-
-			@Override
-			public void run() {
-				// TODO: http request
-
-				mSpeakers = DataRetriever
-						.retrieveAllSpeakers(SpeakerListAcitivity.this);
-
-				Message msg = new Message();
-				Bundle data = new Bundle();
-				if (mSpeakers != null) {
-					Log.i(TAG, "list size = " + mSpeakers.size());
-					data.putString("download", "succeed");
-				} else {
-					data.putString("download", "failed");
-				}
-				msg.setData(data);
-				handler.sendMessage(msg);
-			}
-		}).start();
-	}
+	/*
+	 * @SuppressLint("NewApi") // 创建下载线程 private void createDownloadThread() {
+	 * new Thread(new Runnable() {
+	 * 
+	 * @Override public void run() { // TODO: http request
+	 * 
+	 * mSpeakers = DataRetriever
+	 * .retrieveAllSpeakers(SpeakerListAcitivity.this);
+	 * 
+	 * Message msg = new Message(); Bundle data = new Bundle(); if (mSpeakers !=
+	 * null) { Log.i(TAG, "list size = " + mSpeakers.size());
+	 * data.putString("download", "succeed"); } else {
+	 * data.putString("download", "failed"); } msg.setData(data);
+	 * handler.sendMessage(msg); } }).start(); }
+	 */
 
 	private static class ViewHolder {
 		ImageView mImage = null;
