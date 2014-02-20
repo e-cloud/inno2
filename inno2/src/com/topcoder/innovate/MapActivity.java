@@ -26,11 +26,11 @@ import com.topcoder.innovate.util.DataRetriever;
 public class MapActivity extends Activity {
 
 	private final static String TAG = "Innovate";
-	private WeakReference<MapActivity> weakRef = new WeakReference<MapActivity>(
+	private WeakReference<MapActivity> mWeakReference = new WeakReference<MapActivity>(
 			this);
-	private List<Blingcoord> blingList = null;
-	private Handler handler = new MapHandler(weakRef);
-	private GoogleMap map;
+	private List<Blingcoord> mBlingcoords = null;
+	private Handler mHandler = new MapHandler(mWeakReference);
+	private GoogleMap mGoogleMap;
 
 	@SuppressLint("NewApi")
 	@Override
@@ -39,28 +39,28 @@ public class MapActivity extends Activity {
 		setContentView(R.layout.activity_map);
 
 		// Get a handle to the Map Fragment
-		map = ((MapFragment) getFragmentManager().findFragmentById(R.id.map))
-				.getMap();
+		mGoogleMap = ((MapFragment) getFragmentManager().findFragmentById(
+				R.id.map)).getMap();
 
-		map.setMapType(GoogleMap.MAP_TYPE_NORMAL);
+		mGoogleMap.setMapType(GoogleMap.MAP_TYPE_NORMAL);
 		LatLng center = new LatLng(37.783753, -122.401192);
 
-		map.setMyLocationEnabled(true);
-		map.moveCamera(CameraUpdateFactory.newLatLngZoom(center, 15));
+		mGoogleMap.setMyLocationEnabled(true);
+		mGoogleMap.moveCamera(CameraUpdateFactory.newLatLngZoom(center, 15));
 
 		RtrieveData();
 
 	}
 
 	private void setMarkers() {
-		if (blingList != null) {
+		if (mBlingcoords != null) {
 			LatLng place;
 			Blingcoord tmpbling;
-			for (int i = 0; i < blingList.size(); i++) {
-				tmpbling = blingList.get(i);
+			for (int i = 0; i < mBlingcoords.size(); i++) {
+				tmpbling = mBlingcoords.get(i);
 				place = new LatLng(tmpbling.getLatitude(),
 						tmpbling.getLongitude());
-				map.addMarker(
+				mGoogleMap.addMarker(
 						new MarkerOptions()
 								.title(tmpbling.getName())
 								.snippet(
@@ -70,7 +70,7 @@ public class MapActivity extends Activity {
 						BitmapDescriptorFactory.fromResource(R.drawable.u));
 
 			}
-			map.setOnMarkerClickListener(new OnMarkerClickListener() {
+			mGoogleMap.setOnMarkerClickListener(new OnMarkerClickListener() {
 
 				@Override
 				public boolean onMarkerClick(Marker arg0) {
@@ -86,18 +86,18 @@ public class MapActivity extends Activity {
 	private void RtrieveData() {
 		new Thread(new Runnable() {
 			public void run() {
-				blingList = DataRetriever
+				mBlingcoords = DataRetriever
 						.retrieveAllBlingcoords(MapActivity.this);
 
 				Message msg = new Message();
 				Bundle data = new Bundle();
-				if (blingList != null) {
+				if (mBlingcoords != null) {
 					data.putString("Download", "successful");
 				} else {
 					data.putString("Download", "failed");
 				}
 				msg.setData(data);
-				handler.sendMessage(msg);
+				mHandler.sendMessage(msg);
 			}
 		}).start();
 	}

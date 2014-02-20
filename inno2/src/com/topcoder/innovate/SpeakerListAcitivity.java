@@ -7,9 +7,7 @@ import java.lang.reflect.Field;
 import java.util.List;
 
 import android.app.Activity;
-import android.app.AlertDialog;
 import android.content.Context;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
@@ -25,7 +23,6 @@ import android.widget.ListView;
 import android.widget.TextView;
 
 import com.topcoder.innovate.model.Speaker;
-import com.topcoder.innovate.util.NetworkDetector;
 
 /**
  * @author ScottSaint
@@ -43,6 +40,7 @@ public class SpeakerListAcitivity extends Activity {
 	 * 
 	 * @see android.app.Activity#onCreate(android.os.Bundle)
 	 */
+	@SuppressWarnings("unchecked")
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
@@ -52,94 +50,63 @@ public class SpeakerListAcitivity extends Activity {
 
 		// mSpeakers = loadDataFromAsset();
 
-		if (NetworkDetector.isNetworkConnected(getApplicationContext())) {
+		mListView = (ListView) findViewById(R.id.listview);
+		homeButton = (ImageView) findViewById(R.id.home_btn);
+		infoButton = (ImageView) findViewById(R.id.info_btn);
 
-			mListView = (ListView) findViewById(R.id.listview);
-			homeButton = (ImageView) findViewById(R.id.home_btn);
-			infoButton = (ImageView) findViewById(R.id.info_btn);
+		// 设置home按钮的监听器
+		homeButton.setOnClickListener(new OnClickListener() {
 
-			homeButton.setOnClickListener(new OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				// TODO Auto-generated method stub
+				Log.d(TAG, "clicked on home button");
+				Intent intent = new Intent(SpeakerListAcitivity.this,
+						HomeActivity.class);
+				startActivity(intent);
+			}
+		});
 
-				@Override
-				public void onClick(View v) {
-					// TODO Auto-generated method stub
-					Log.d(TAG, "clicked on home button");
-					Intent intent = new Intent(SpeakerListAcitivity.this,
-							HomeActivity.class);
-					startActivity(intent);
-				}
-			});
+		// 设置info按钮的监听器
+		infoButton.setOnClickListener(new OnClickListener() {
 
-			infoButton.setOnClickListener(new OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				// TODO Auto-generated method stub
+				Log.d(TAG, "clicked on info button");
+				// Start game here...
+				Intent intent = new Intent(SpeakerListAcitivity.this,
+						WebViewActivity.class);
+				startActivity(intent);
+			}
+		});
 
-				@Override
-				public void onClick(View v) {
-					// TODO Auto-generated method stub
-					Log.d(TAG, "clicked on info button");
-					// Start game here...
-					Intent intent = new Intent(SpeakerListAcitivity.this,
-							WebViewActivity.class);
-					startActivity(intent);
-				}
-			});
+		// 设置列表视图的监听器
+		mListView.setOnItemClickListener(new OnItemClickListener() {
+			@Override
+			public void onItemClick(AdapterView<?> parent, View view,
+					int position, long id) {
+				// TODO Auto-generated method stub
+				Intent intent = new Intent(SpeakerListAcitivity.this,
+						SpeakerDetailActivtiy.class);
+				Bundle bundle = new Bundle();
+				bundle.putSerializable("speaker", mSpeakers.get(position));
+				intent.putExtras(bundle);
+				startActivity(intent);
+			}
+		});
 
-			mListView.setOnItemClickListener(new OnItemClickListener() {
-				@Override
-				public void onItemClick(AdapterView<?> parent, View view,
-						int position, long id) {
-					// TODO Auto-generated method stub
-					Intent intent = new Intent(SpeakerListAcitivity.this,
-							SpeakerDetailActivtiy.class);
-					Bundle bundle = new Bundle();
-					bundle.putSerializable("speaker", mSpeakers.get(position));
-					intent.putExtras(bundle);
-					startActivity(intent);
-				}
-			});
+		// 获取从HomeActivity传来的数据，并转换成所需的数据
+		mSpeakers = (List<Speaker>) getIntent()
+				.getSerializableExtra("speakers");
 
-			mSpeakers = (List<Speaker>) getIntent().getSerializableExtra(
-					"speakers");
-			setAdapter();
-
-		} else {
-			new AlertDialog.Builder(SpeakerListAcitivity.this)
-					.setTitle(R.string.head)
-					.setMessage(R.string.message)
-					.setPositiveButton(
-							getResources().getString(R.string.ok),
-							new android.content.DialogInterface.OnClickListener() {
-
-								@Override
-								public void onClick(DialogInterface dialog,
-										int which) {
-									// TODO Auto-generated method stub
-									finish();
-								}
-							}).show();
-		}
-	}
-
-	private void setAdapter() {
+		// 创建相应的适配器，使得列表能正确显示数据
 		SpeakerAdapter speakerAdapter = new SpeakerAdapter(this, mSpeakers);
 		mListView.setAdapter(speakerAdapter);
+
 	}
 
-	/*
-	 * @SuppressLint("NewApi") // 创建下载线程 private void createDownloadThread() {
-	 * new Thread(new Runnable() {
-	 * 
-	 * @Override public void run() { // TODO: http request
-	 * 
-	 * mSpeakers = DataRetriever
-	 * .retrieveAllSpeakers(SpeakerListAcitivity.this);
-	 * 
-	 * Message msg = new Message(); Bundle data = new Bundle(); if (mSpeakers !=
-	 * null) { Log.i(TAG, "list size = " + mSpeakers.size());
-	 * data.putString("download", "succeed"); } else {
-	 * data.putString("download", "failed"); } msg.setData(data);
-	 * handler.sendMessage(msg); } }).start(); }
-	 */
-
+	// 用于缓存视图控件的引用
 	private static class ViewHolder {
 		ImageView mImage = null;
 		TextView mName = null;
@@ -200,6 +167,8 @@ public class SpeakerListAcitivity extends Activity {
 			}
 
 			Speaker speaker = mListItems.get(position);
+
+			// 利用反射机制寻找并绑定相应图片
 			Field field;
 			try {
 				Class<com.topcoder.innovate.R.drawable> resource = R.drawable.class;

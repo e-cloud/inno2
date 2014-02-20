@@ -22,8 +22,8 @@ import com.topcoder.innovate.model.Speaker;
  * 
  */
 public class SpeakerDetailActivtiy extends Activity {
-	private ImageView homeButton;
-	private ImageView infoButton;
+	private ImageView mHomeButton;
+	private ImageView mImageView;
 	private Speaker mSpeaker;
 	private ImageView mSpeakerImage;
 	private ImageView mHideArrow;
@@ -49,8 +49,8 @@ public class SpeakerDetailActivtiy extends Activity {
 		mSpeakerTitle = (TextView) findViewById(R.id.detail_speaker_title);
 		mSpeakerDetail = (TextView) findViewById(R.id.speaker_detail);
 		mHideArrow = (ImageView) findViewById(R.id.hide_arrow);
-		homeButton = (ImageView) findViewById(R.id.home_btn);
-		infoButton = (ImageView) findViewById(R.id.info_btn);
+		mHomeButton = (ImageView) findViewById(R.id.home_btn);
+		mImageView = (ImageView) findViewById(R.id.info_btn);
 
 		Field field;
 		try {
@@ -74,7 +74,7 @@ public class SpeakerDetailActivtiy extends Activity {
 		mSpeakerDetail.setText(mSpeaker.getDetails());
 		mSpeakerDetail.setMovementMethod(ScrollingMovementMethod.getInstance());
 
-		homeButton.setOnClickListener(new OnClickListener() {
+		mHomeButton.setOnClickListener(new OnClickListener() {
 
 			@Override
 			public void onClick(View v) {
@@ -86,7 +86,7 @@ public class SpeakerDetailActivtiy extends Activity {
 			}
 		});
 
-		infoButton.setOnClickListener(new OnClickListener() {
+		mImageView.setOnClickListener(new OnClickListener() {
 
 			@Override
 			public void onClick(View v) {

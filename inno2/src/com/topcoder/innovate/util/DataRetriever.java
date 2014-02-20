@@ -3,25 +3,15 @@
  */
 package com.topcoder.innovate.util;
 
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileOutputStream;
 import java.io.IOException;
-import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.apache.http.HttpEntity;
-import org.apache.http.HttpResponse;
 import org.apache.http.client.ClientProtocolException;
-import org.apache.http.client.HttpClient;
-import org.apache.http.client.methods.HttpGet;
-import org.apache.http.impl.client.DefaultHttpClient;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import android.app.Activity;
 import android.content.Context;
 import android.util.Log;
 
@@ -34,76 +24,35 @@ import com.topcoder.innovate.model.Speaker;
  * 
  */
 public class DataRetriever {
-	private final static String TAG = "Dataretriever";
+	private final static String TAG = "Innovate.DataRetriever";
 
-	public static void retrieveDataAsCache(String url, String filename,
-			String targetDir) throws ClientProtocolException, IOException {
-		HttpGet httpGet = new HttpGet(url);
-		HttpClient client = new DefaultHttpClient();
-		HttpResponse response = null;
-		response = client.execute(httpGet);
-		HttpEntity httpEntity = response.getEntity();
-
-		// 创建文件输出流将获得的网络数据存储到指定目录中
-		File cacheFile = new File(targetDir, filename);
-		Log.i(TAG, cacheFile.getAbsolutePath());
-		FileOutputStream fos = new FileOutputStream(cacheFile);
-		httpEntity.writeTo(fos);
-		fos.flush();
-		fos.close();
-		Log.i(TAG, "stored the file " + filename
-				+ " retrieve from the Internet.");
+	/**
+	 * @param content
+	 *            要转换的内容
+	 * @return JSONArray
+	 * @throws JSONException
+	 */
+	public static JSONArray strToJsonArray(String content) throws JSONException {
+		return new JSONArray(content.replace('\n', ' '));
 	}
 
-	// 准备缓存数据
-	public static void prepareCacheFile(Context context, String url,
-			String filename) throws ClientProtocolException, IOException {
+	public static List<Speaker> retrieveAllSpeakers(Context context) {
 
-		File readFile = new File(context.getCacheDir().getAbsolutePath(),
-				filename);
-
-		// 如果缓存文件不存在，则下载
-		if (!readFile.exists()) {
-			retrieveDataAsCache(url, filename, context.getCacheDir()
-					.getAbsolutePath());
-			Log.i(TAG, "download a file as cache.");
-		}
-	}
-
-	// 获取数据，返回JSONArray
-	public static JSONArray retrieveData(Context context, String url,
-			String filename) throws JSONException, IOException {
-
-		prepareCacheFile(context, url, filename);
-		File readFile = new File(context.getCacheDir().getAbsolutePath(),
-				filename);
-
-		JSONArray jsonArray = null;
-
-		// 读取缓存文件
-		InputStream is = new FileInputStream(readFile);
-		StringBuffer out = new StringBuffer();
-		byte[] b = new byte[4096];
-		for (int n; (n = is.read(b)) != -1;) {
-			out.append(new String(b, 0, n));
-		}
-		is.close();
-
-		// 转换成json数据对象
-		jsonArray = new JSONArray(out.toString().replace('\n', ' '));
-		return jsonArray;
-	}
-
-	public static List<Speaker> retrieveAllSpeakers(Activity activity) {
-
-		// 存储获得得Speaker，用于将数据返回
+		// 存储Speakers，用于将数据返回
 		List<Speaker> speakerArrayList = null;
+
 		try {
+			CacheManager cManager = new CacheManager(context);
+
+			String url = context.getString(R.string.feeds_speakers);
+			String fileName = context.getResources().getString(
+					R.string.speakersfilename);
+			if (!cManager.checkCache(fileName)) {
+				cManager.downloadCache(url, fileName);
+			}
+
 			// 获取网络数据
-			JSONArray jsonArray = retrieveData(activity, activity
-					.getResources().getString(R.string.feeds_speakers),
-					activity.getResources()
-							.getString(R.string.speakersfilename));
+			JSONArray jsonArray = strToJsonArray(cManager.readCache(fileName));
 
 			speakerArrayList = new ArrayList<Speaker>();
 			Speaker speaker;
@@ -145,19 +94,26 @@ public class DataRetriever {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+		Log.i(TAG, "retrieve speakers");
 		return speakerArrayList;
 	}
 
-	public static List<Blingcoord> retrieveAllBlingcoords(Activity activity) {
+	public static List<Blingcoord> retrieveAllBlingcoords(Context context) {
 
 		// 存储获得得Blingcoord，用于将数据返回
 		List<Blingcoord> blingArrayList = null;
 		try {
+			CacheManager cManager = new CacheManager(context);
+
+			String url = context.getString(R.string.bling);
+			String fileName = context.getResources().getString(
+					R.string.blingfilename);
+			if (!cManager.checkCache(fileName)) {
+				cManager.downloadCache(url, fileName);
+			}
 
 			// 获取网络数据
-			JSONArray jsonArray = retrieveData(activity, activity
-					.getResources().getString(R.string.bling), activity
-					.getResources().getString(R.string.blingfilename));
+			JSONArray jsonArray = strToJsonArray(cManager.readCache(fileName));
 
 			// 在已获取网络数据后才创建数组实例
 			blingArrayList = new ArrayList<Blingcoord>();
@@ -198,6 +154,7 @@ public class DataRetriever {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+		Log.i(TAG, "retrieve blingcoords");
 		return blingArrayList;
 	}
 

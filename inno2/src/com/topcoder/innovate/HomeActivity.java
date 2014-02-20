@@ -1,6 +1,5 @@
 package com.topcoder.innovate;
 
-import java.io.File;
 import java.io.IOException;
 import java.io.Serializable;
 import java.util.ArrayList;
@@ -15,7 +14,6 @@ import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
-import android.content.res.Resources;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.util.Log;
@@ -27,7 +25,9 @@ import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.topcoder.innovate.model.Speaker;
+import com.topcoder.innovate.util.CacheManager;
 import com.topcoder.innovate.util.DataRetriever;
+import com.topcoder.innovate.util.NetworkDetector;
 
 public class HomeActivity extends Activity {
 
@@ -43,9 +43,13 @@ public class HomeActivity extends Activity {
 		Log.i(TAG, "create home activity.");
 		setContentView(R.layout.activity_home);
 		init(savedInstanceState);
-		final LoadDataTask ldt = new LoadDataTask(HomeActivity.this);
-		ldt.execute();
-
+		if (NetworkDetector.isNetworkConnected(getApplicationContext())) {
+			final LoadDataTask ldt = new LoadDataTask(HomeActivity.this);
+			ldt.execute();
+		} else {
+			Toast.makeText(getApplicationContext(), R.string.message,
+					Toast.LENGTH_LONG).show();
+		}
 	}
 
 	private void init(Bundle savedInstanceState) {
@@ -113,43 +117,18 @@ public class HomeActivity extends Activity {
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item) {
 		// TODO Auto-generated method stub
-		clearCache(this);
+		// 清空缓存
+		CacheManager cm = new CacheManager(this);
+		cm.clearCache();
 		return super.onOptionsItemSelected(item);
-	}
-
-	public static void clearCache(Context context) {
-		try {
-			File dir = context.getCacheDir();
-			if (dir != null && dir.isDirectory()) {
-				deleteDir(dir);
-			}
-			Log.i(TAG, "cache was cleaned.");
-		} catch (Exception e) {
-			// TODO: handle exception
-		}
-	}
-
-	public static boolean deleteDir(File dir) {
-		if (dir != null && dir.isDirectory()) {
-			String[] children = dir.list();
-			for (int i = 0; i < children.length; i++) {
-				boolean success = deleteDir(new File(dir, children[i]));
-				if (!success) {
-					return false;
-				}
-			}
-		}
-
-		// The directory is now empty so delete it
-		return dir.delete();
 	}
 
 	private class LoadDataTask extends AsyncTask<Void, Integer, Integer> {
 
-		private Context context = null;
+		private Context mContext = null;
 
 		public LoadDataTask(Context context) {
-			this.context = context;
+			this.mContext = context;
 		}
 
 		/*
@@ -171,12 +150,18 @@ public class HomeActivity extends Activity {
 			// 存储获得得Speaker，用于将数据返回
 			List<Speaker> speakerArrayList = null;
 			try {
-				Resources res = context.getResources();
+				CacheManager cManager = new CacheManager(mContext);
+
+				String url = mContext.getString(R.string.feeds_speakers);
+				String fileName = mContext.getResources().getString(
+						R.string.speakersfilename);
+				if (!cManager.checkCache(fileName)) {
+					cManager.downloadCache(url, fileName);
+				}
 
 				// 获取网络数据
-				JSONArray jsonArray = DataRetriever.retrieveData(context,
-						res.getString(R.string.feeds_speakers),
-						res.getString(R.string.speakersfilename));
+				JSONArray jsonArray = DataRetriever.strToJsonArray(cManager
+						.readCache(fileName));
 
 				speakerArrayList = new ArrayList<Speaker>();
 				Speaker speaker;
@@ -225,7 +210,7 @@ public class HomeActivity extends Activity {
 				e.printStackTrace();
 			}
 			// 将Speaker list序列化后保存在Intent，以便传给SpeakerListActivity
-			Intent intent = ((HomeActivity) context).getIntent();
+			Intent intent = ((HomeActivity) mContext).getIntent();
 			intent.putExtra("speakers", (Serializable) speakerArrayList);
 			return speakerArrayList.size();
 		}
@@ -255,7 +240,7 @@ public class HomeActivity extends Activity {
 			// TODO Auto-generated method stub
 			super.onPostExecute(result);
 			mProgressDialog.dismiss();
-			Toast.makeText(context, "Loaded " + result + " speakers.",
+			Toast.makeText(mContext, "Loaded " + result + " speakers.",
 					Toast.LENGTH_SHORT).show();
 		}
 	}

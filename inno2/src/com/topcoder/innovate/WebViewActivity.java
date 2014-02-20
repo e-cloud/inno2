@@ -21,8 +21,8 @@ import android.widget.ImageView;
  */
 public class WebViewActivity extends Activity {
 
-	private ImageView homeButton;
-	private WebView webView;
+	private ImageView mHomeButton;
+	private WebView mWebView;
 	private static final String TAG = "Innovate";
 
 	/*
@@ -37,9 +37,9 @@ public class WebViewActivity extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_webview);
 
-		homeButton = (ImageView) findViewById(R.id.home_btn);
-		webView = (WebView) findViewById(R.id.web_view);
-		homeButton.setOnClickListener(new OnClickListener() {
+		mHomeButton = (ImageView) findViewById(R.id.home_btn);
+		mWebView = (WebView) findViewById(R.id.web_view);
+		mHomeButton.setOnClickListener(new OnClickListener() {
 
 			@Override
 			public void onClick(View v) {
@@ -57,7 +57,7 @@ public class WebViewActivity extends Activity {
 				 */
 			}
 		});
-		webView.setWebViewClient(new WebViewClient() {
+		mWebView.setWebViewClient(new WebViewClient() {
 
 			/*
 			 * let the hyperlinks jump in the current view
@@ -70,15 +70,15 @@ public class WebViewActivity extends Activity {
 				return true;
 			}
 		});
-		webView.getSettings().setJavaScriptEnabled(true);
-		webView.loadUrl(getResources().getString(R.string.url));
+		mWebView.getSettings().setJavaScriptEnabled(true);
+		mWebView.loadUrl(getResources().getString(R.string.url));
 		Log.d(TAG, "loaded the url.");
 	}
 
 	// To handle the back button key press
 	public boolean onKeyDown(int keyCode, KeyEvent event) {
-		if ((keyCode == KeyEvent.KEYCODE_BACK) && webView.canGoBack()) {
-			webView.goBack();
+		if ((keyCode == KeyEvent.KEYCODE_BACK) && mWebView.canGoBack()) {
+			mWebView.goBack();
 			return true;
 		}
 		return super.onKeyDown(keyCode, event);
